@@ -1,0 +1,359 @@
+﻿@import '_colors.scss';
+@import '_global.scss';
+
+/*#region SideNav */
+
+.side-nav:hover > .link > p {
+    color: transparentize($Text, .4);
+}
+
+.side-nav {
+    position: fixed;
+    right: .5vw;
+    top: 30vh;
+    z-index: 100;
+    padding: 3vw 1vw 3vw 3vw;
+
+
+    .link {
+        align-content: flex-end !important;
+        padding-bottom: 1.3vh;
+        margin-left: auto !important;
+
+        .bullet {
+            background: rgba(18, 18, 18, 0.16);
+            height: .7vw;
+            width: .7vw;
+            margin: auto auto auto .3vw;
+            @include trans(.5s);
+            @include border-radius(.5vw,.5vw,.5vw,.5vw);
+        }
+
+        p {
+            padding-bottom: 3px;
+            font-size: 1vw;
+            @include trans(.5s);
+            color: transparentize($Text, 1);
+        }
+    }
+
+    .link:hover .bullet {
+        background: #31FF3F;
+        @include trans(.3s);
+    }
+
+    .link:hover p {
+        font-size: 1.6vw;
+        color: $Text;
+
+        @include trans(.3s);
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .side-nav {
+        visibility: collapse;
+        height: 0;
+        width: 0;
+    }
+}
+
+/*#endregion */
+
+nav {
+    z-index: 100;
+    position: fixed;
+    width: 100vw;
+    padding: .6vw;
+    overflow-y: hidden;
+    background: transparent;
+    @include trans(.4s);
+
+    > * {
+        z-index: 80;
+        margin-left: 10px;
+        vertical-align: central;
+        overflow-y: hidden;
+    }
+
+    .logo {
+        flex: 0.2;
+        margin: 0 0 0 2vw !important;
+        display: flex;
+        align-content: center;
+
+        img {
+            height: 2vw;
+            width: auto;
+            margin: 0;
+        }
+    }
+
+    section.row {
+        flex: 3;
+        float: right;
+        margin-right: 2vw;
+        flex-direction: row-reverse !important;
+
+        strong {
+            background: blue;
+            align-content: center;
+        }
+
+        a {
+            align-self: center;
+            padding: .4vw 1.0vw;
+            vertical-align: central;
+            font-size: 1.2vw;
+            float: right;
+            margin-right: 1vw;
+            color: $Text;
+            overflow-y: hidden;
+            @include border-radius(100px,100px,100px,100px);
+            @include trans(.4s);
+
+            img {
+                height: 1.2vw;
+                margin: 0 0 0 10px;
+            }
+        }
+
+        a:hover {
+            background: darken($NavBackground, 12%);
+            @include trans(.2s);
+        }
+
+        a:active {
+            background: darken($NavBackground, 24%);
+        }
+    }
+}
+
+nav:hover {
+    background: transparentize($NavBackground,.32);
+    @include shadow-medium();
+    @include trans(.2s);
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    nav {
+        padding: 1vw;
+        background: transparentize($NavBackground,.32);
+        @include shadow-mega();
+
+        .logo {
+            flex: .5;
+            padding: .5vw;
+        }
+
+        section.row {
+            flex: 3;
+            margin-right: 4vw;
+            flex-direction: row-reverse !important;
+
+            a {
+                padding: 0.2vw 2vw .8vw 2vw;
+                font-size: 2.2vw;
+
+                img {
+                    height: 2.0vw;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    nav {
+        padding: 1vw;
+        height: 6vh;
+        padding: 1vw;
+        background: transparentize($NavBackground,.32);
+        @include shadow-mega();
+
+        .logo {
+            flex: 0.5;
+        }
+
+        section.row {
+            flex: 3;
+            margin-right: 4vw;
+            flex-direction: row-reverse !important;
+
+            a {
+                padding: 0.6vw 3vw 2.5vw 3vw;
+                font-size: 4vw;
+
+                img {
+                    vertical-align: central;
+                    height: 3.6vw;
+                }
+            }
+        }
+    }
+
+    section.row {
+        flex: 3;
+        margin-right: 4vw;
+        flex-direction: row-reverse !important;
+
+        a {
+            padding: .8vw 2vw;
+            font-size: 4vw;
+        }
+    }
+}
+
+.callToAction {
+    width: 30%;
+    @include shadow-more;
+    background: $CallToAction;
+    padding: 8px 14px;
+    color: $White-text;
+    font-size: 1.8vw;
+    transition: all ease 0.5s;
+}
+
+.callToAction:hover {
+    background: lighten($CallToAction,10%);
+    transition: all ease 0.25s;
+}
+
+.callToAction:active {
+    background: lighten($CallToAction,20%);
+    transition: all ease 0.25s;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .callToAction {
+        width: 50%;
+        font-size: 4vw;
+        padding: 16px 28px;
+    }
+}
+
+
+.submit {
+    overflow-y: hidden;
+    width: 40%;
+    @include shadow-more;
+    background: $CallToAction;
+    padding: .6vw 0.4vw;
+    margin-bottom: 1vw;
+    color: $White-text;
+    font-size: 1.5vw;
+    transition: all ease 0.5s;
+
+    img {
+        height: 2vw;
+        margin: auto 0.5vw auto auto;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .submit {
+        bottom: 0;
+        align-self: flex-end;
+        width: 60%;
+        @include shadow-more;
+        background: $CallToAction;
+        padding: .8vw 0;
+        margin-bottom: 3vw;
+        color: $White-text;
+        font-size: 5vw;
+        transition: all ease 0.5s;
+
+        img {
+            height: 8vw;
+            margin: auto 2vw auto auto;
+        }
+    }
+}
+
+.submit:hover {
+    background: lighten($CallToAction,10%);
+    transition: all ease 0.25s;
+}
+
+.submit:active {
+    background: lighten($CallToAction,20%);
+    transition: all ease 0.25s;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin: 6px;
+
+    &-label {
+        font-size: 1.4vw;
+        color: $text-label;
+        text-align: right;
+        margin: 0 0 .3vw 0;
+    }
+
+    &-entry {
+        flex: 3;
+        color: $text-color;
+        background: $text-background;
+        border: none;
+        padding: .45vw;
+        text-align: right;
+        outline: none;
+        font-size: 1.4vw;
+        resize: none;
+    }
+
+    &-underline {
+        flex: .4;
+        background: $text-underline;
+        transition: all ease .6s;
+    }
+
+    &-entry:focus + .text-underline {
+        background: $text-underline-active;
+        transition: all ease .2s;
+    }
+
+    &-error {
+        flex: 3;
+        font-size: 1vw;
+        text-align: right;
+        margin: 0 0 .3vw 0;
+    }
+
+    :-ms-input-placeholder {
+        color: $text-placeholder;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .text {
+
+        &-label {
+            font-size: 3.4vw;
+            margin: 0 0 .5vw 0;
+        }
+
+        &-underline {
+            flex: .4;
+            background: $text-underline;
+            transition: all ease .6s;
+        }
+
+        &-entry {
+            padding: 1vw;
+            font-size: 3.4vw;
+        }
+
+        &-error {
+            font-size: 2.2vw;
+            margin: 0 0 .7vw 0;
+        }
+    }
+}
+
+.errorProvider {
+    font-size: 1vw;
+}

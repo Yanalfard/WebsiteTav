@@ -1,0 +1,14 @@
+<svg id="Telegram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="220" height="220" viewBox="0 0 220 220">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="0.996" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#41bce7"/>
+      <stop offset="1" stop-color="#22a6dc"/>
+    </linearGradient>
+  </defs>
+  <circle id="Ellipse_13" data-name="Ellipse 13" cx="110" cy="110" r="110" fill="url(#linear-gradient)"/>
+  <g id="Group_70" data-name="Group 70" transform="translate(39.291 59.48)">
+    <path id="Path_105" data-name="Path 105" d="M215.689,142.239l-19.637,99.043s-2.75,6.875-10.312,3.566l-45.332-34.762-16.5-7.949L96.15,192.813s-4.254-1.5-4.684-4.812,4.813-5.07,4.813-5.07l110.344-43.27C206.623,139.618,215.689,135.622,215.689,142.239Z" transform="translate(-91.442 -138.426)" fill="#fff"/>
+    <path id="Path_106" data-name="Path 106" d="M179.977,267.183s-1.332-.129-2.965-5.328S167,229.155,167,229.155l66.645-42.324s3.867-2.32,3.7,0c0,0,.688.43-1.375,2.32-2.062,1.934-52.336,47.137-52.336,47.137" transform="translate(-134.534 -165.444)" fill="#d2e4f0"/>
+    <path id="Path_107" data-name="Path 107" d="M218.14,318.121l-17.918,16.371a3.086,3.086,0,0,1-2.922.387l3.438-30.379" transform="translate(-151.814 -233.14)" fill="#b5cfe4"/>
+  </g>
+</svg>

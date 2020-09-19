@@ -1,0 +1,89 @@
+﻿@import '_colors.scss';
+@import '_global.scss';
+@import '_controls.scss';
+@import '_layout.scss';
+
+//---------------------------------------
+
+.description {
+    width: 85%;
+    margin-top:4px;
+    font-size: 1.5vw;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.media {
+    margin: auto;
+    width: 16vw;
+    align-content: space-between;
+
+    &-icon {
+        width: 75%;
+    }
+
+    &-link {
+    }
+}
+
+.map {
+    width: 100vw;
+    background: $ControlBackground;
+    height: 38vw;
+
+}
+
+.contact {
+    margin: 2vw;
+
+    &-icon {
+        width:  4vw;
+        height: 4vw;
+    }
+
+    &-info {
+    }
+}
+
+.email {
+    margin: auto !important;
+    width: 20vw;
+    height: 30vw;
+    padding: 2.0vw!important;
+
+    text{
+        margin:.8vw!important;
+    }
+
+}
+
+
+#text {
+    height: 12vw;
+    .text-underline{
+        height:0.4vw;
+        flex:0.2;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .contact {
+        margin: 3vw;
+
+        &-icon {
+            width: 6vw;
+            height: 6vw;
+        }
+
+        &-info {
+            font-size: 3.5vw;
+        }
+    }
+
+    .email {
+        margin: auto !important;
+        width: 46vw;
+        height: 65vw;
+        padding: 2vw;
+    }
+}

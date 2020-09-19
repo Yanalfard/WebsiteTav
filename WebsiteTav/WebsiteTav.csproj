@@ -1,0 +1,409 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60332193-741F-48B3-ADB3-A6187F901CE5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebsiteTav</RootNamespace>
+    <AssemblyName>WebsiteTav</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44399</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <TypeScriptToolsVersion>3.4</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Ignore\Idol.html" />
+    <Content Include="JsDecoder\BjaxLib.js" />
+    <Content Include="JsDecoder\CoopJore.js" />
+    <Content Include="JsDecoder\HelpJore.js" />
+    <Content Include="JsDecoder\ProductJore.js" />
+    <Content Include="JsDecoder\StartJore.js" />
+    <Content Include="Index.html" />
+    <Content Include="Resources\Font\stylesheet.css" />
+    <Content Include="Resources\Jpg\Ahmadzade.jpg" />
+    <Content Include="Resources\Jpg\asp.net_.jpg" />
+    <Content Include="Resources\Jpg\Gerami.jpg" />
+    <Content Include="Resources\Jpg\Lemi.jpg" />
+    <Content Include="Resources\Jpg\Sahandi.jpg" />
+    <Content Include="Resources\Jpg\Woman.jpg" />
+    <Content Include="Resources\Png\Asp.png" />
+    <Content Include="Resources\Png\Icon.png" />
+    <Content Include="Resources\Png\Parking\ParkingDark.png" />
+    <Content Include="Resources\Png\Parking\ParkingHero.png" />
+    <Content Include="Resources\Png\Parking\ParkingLight.png" />
+    <Content Include="Resources\Png\Parking\ParkingVertical.png" />
+    <Content Include="Resources\Png\WordPress.png" />
+    <Content Include="Resources\Svg\ArvinTavLogo.svg" />
+    <Content Include="Resources\Svg\BackgroundProjects.svg" />
+    <Content Include="Resources\Svg\CellPhone.svg" />
+    <Content Include="Resources\Svg\DigiDarman.svg" />
+    <Content Include="Resources\Svg\favIcon.svg" />
+    <Content Include="Resources\Svg\Icon.svg" />
+    <Content Include="Resources\Svg\Icons\Chat.svg" />
+    <Content Include="Resources\Svg\Icons\Download.svg" />
+    <Content Include="Resources\Svg\Icons\HamburgerMenu.svg" />
+    <Content Include="Resources\Svg\Icons\Headset.svg" />
+    <Content Include="Resources\Svg\Icons\Home.svg" />
+    <Content Include="Resources\Svg\Icons\Mail.svg" />
+    <Content Include="Resources\Svg\Icons\Telegram.svg" />
+    <Content Include="Resources\Svg\Image.svg" />
+    <Content Include="Resources\Svg\Instagram.svg" />
+    <Content Include="Resources\Svg\Location.svg" />
+    <Content Include="Resources\Svg\Machine.svg" />
+    <Content Include="Resources\Svg\Mail.svg" />
+    <Content Include="Resources\Svg\ParkingIcon.svg" />
+    <Content Include="Resources\Svg\Phone.svg" />
+    <Content Include="Resources\Svg\Service-Background.svg" />
+    <Content Include="Resources\Svg\ServiceGraphicDesign.svg" />
+    <Content Include="Resources\Svg\ServiceMedia.svg" />
+    <Content Include="Resources\Svg\ServiceNetwork.svg" />
+    <Content Include="Resources\Svg\ServicePC.svg" />
+    <Content Include="Resources\Svg\ServicePhone.svg" />
+    <Content Include="Resources\Svg\ServiceWeb.svg" />
+    <Content Include="Resources\Svg\Telegram.svg" />
+    <Content Include="Resources\Svg\Underline_1.svg" />
+    <Content Include="Resources\Svg\Underline_2.svg" />
+    <Content Include="Resources\Svg\Underline_3.svg" />
+    <Content Include="Resources\Svg\Underline_4.svg" />
+    <Content Include="Resources\Svg\Underline_5.svg" />
+    <Content Include="Resources\Svg\Underline_D.svg" />
+    <Content Include="Resources\Svg\Waterfall\Design.svg" />
+    <Content Include="Resources\Svg\Waterfall\Mobile.svg" />
+    <Content Include="Resources\Svg\Waterfall\Monitor.svg" />
+    <Content Include="Resources\Svg\Waterfall\Network.svg" />
+    <Content Include="Resources\Svg\Waterfall\SocialMedia.svg" />
+    <Content Include="Resources\Svg\Waterfall\Website.svg" />
+    <Content Include="Resources\Svg\WhatsApp.svg" />
+    <Content Include="Resources\Svg\Why\Analize.svg" />
+    <Content Include="Resources\Svg\Why\Content.svg" />
+    <Content Include="Resources\Svg\Why\Experience.svg" />
+    <Content Include="Resources\Svg\Why\Fill.svg" />
+    <Content Include="Resources\Svg\Why\Foundation.svg" />
+    <Content Include="Resources\Svg\Why\Quality.svg" />
+    <Content Include="Resources\Svg\Why\Success.svg" />
+    <Content Include="Resources\Svg\Why\Team.svg" />
+    <Content Include="Resources\Svg\WorkFlow.svg" />
+    <Content Include="Resources\Video\end.mp4" />
+    <Content Include="Scripts\About.js" />
+    <Content Include="Scripts\Admin\TblCoop.js" />
+    <Content Include="Scripts\Admin\TblHelp.js" />
+    <Content Include="Scripts\Admin\TblStart.js" />
+    <Content Include="Scripts\General.js" />
+    <Content Include="Scripts\Jquery\esm\popper-utils.js" />
+    <Content Include="Scripts\Jquery\esm\popper-utils.min.js" />
+    <Content Include="Scripts\Jquery\esm\popper.js" />
+    <Content Include="Scripts\Jquery\esm\popper.min.js" />
+    <Content Include="Ignore\Web.config" />
+    <Content Include="Ignore\Sass\_layout.scss" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Ignore\Sass\Offer.scss" />
+    <Content Include="Ignore\Sass\Admin\Orders.scss" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Resources\Font\iranian_sans-webfont.woff" />
+    <Content Include="Resources\Font\iranian_sans-webfont.woff2" />
+    <Content Include="Resources\Svg\Icons\dot.svg" />
+    <Content Include="Resources\Svg\Icons\plus.svg" />
+    <None Include="Scripts\Jquery\jquery-3.5.1.intellisense.js" />
+    <Content Include="Scripts\Jquery\jquery-3.5.1.js" />
+    <Content Include="Scripts\Jquery\jquery-3.5.1.min.js" />
+    <Content Include="Scripts\Jquery\jquery-3.5.1.slim.js" />
+    <Content Include="Scripts\Jquery\jquery-3.5.1.slim.min.js" />
+    <Content Include="Scripts\Jquery\src\index.js" />
+    <Content Include="Scripts\Jquery\src\methods\defaults.js" />
+    <Content Include="Scripts\Jquery\src\methods\destroy.js" />
+    <Content Include="Scripts\Jquery\src\methods\disableEventListeners.js" />
+    <Content Include="Scripts\Jquery\src\methods\enableEventListeners.js" />
+    <Content Include="Scripts\Jquery\src\methods\placements.js" />
+    <Content Include="Scripts\Jquery\src\methods\update.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\applyStyle.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\arrow.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\computeStyle.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\flip.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\hide.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\index.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\inner.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\keepTogether.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\offset.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\preventOverflow.js" />
+    <Content Include="Scripts\Jquery\src\modifiers\shift.js" />
+    <Content Include="Scripts\Jquery\src\utils\clockwise.js" />
+    <Content Include="Scripts\Jquery\src\utils\computeAutoPlacement.js" />
+    <Content Include="Scripts\Jquery\src\utils\debounce.js" />
+    <Content Include="Scripts\Jquery\src\utils\find.js" />
+    <Content Include="Scripts\Jquery\src\utils\findCommonOffsetParent.js" />
+    <Content Include="Scripts\Jquery\src\utils\findIndex.js" />
+    <Content Include="Scripts\Jquery\src\utils\getBordersSize.js" />
+    <Content Include="Scripts\Jquery\src\utils\getBoundaries.js" />
+    <Content Include="Scripts\Jquery\src\utils\getBoundingClientRect.js" />
+    <Content Include="Scripts\Jquery\src\utils\getClientRect.js" />
+    <Content Include="Scripts\Jquery\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="Scripts\Jquery\src\utils\getOffsetParent.js" />
+    <Content Include="Scripts\Jquery\src\utils\getOffsetRect.js" />
+    <Content Include="Scripts\Jquery\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="Scripts\Jquery\src\utils\getOppositePlacement.js" />
+    <Content Include="Scripts\Jquery\src\utils\getOppositeVariation.js" />
+    <Content Include="Scripts\Jquery\src\utils\getOuterSizes.js" />
+    <Content Include="Scripts\Jquery\src\utils\getParentNode.js" />
+    <Content Include="Scripts\Jquery\src\utils\getPopperOffsets.js" />
+    <Content Include="Scripts\Jquery\src\utils\getReferenceNode.js" />
+    <Content Include="Scripts\Jquery\src\utils\getReferenceOffsets.js" />
+    <Content Include="Scripts\Jquery\src\utils\getRoot.js" />
+    <Content Include="Scripts\Jquery\src\utils\getRoundedOffsets.js" />
+    <Content Include="Scripts\Jquery\src\utils\getScroll.js" />
+    <Content Include="Scripts\Jquery\src\utils\getScrollParent.js" />
+    <Content Include="Scripts\Jquery\src\utils\getStyleComputedProperty.js" />
+    <Content Include="Scripts\Jquery\src\utils\getSupportedPropertyName.js" />
+    <Content Include="Scripts\Jquery\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="Scripts\Jquery\src\utils\getWindow.js" />
+    <Content Include="Scripts\Jquery\src\utils\getWindowSizes.js" />
+    <Content Include="Scripts\Jquery\src\utils\includeScroll.js" />
+    <Content Include="Scripts\Jquery\src\utils\index.js" />
+    <Content Include="Scripts\Jquery\src\utils\isBrowser.js" />
+    <Content Include="Scripts\Jquery\src\utils\isFixed.js" />
+    <Content Include="Scripts\Jquery\src\utils\isFunction.js" />
+    <Content Include="Scripts\Jquery\src\utils\isIE.js" />
+    <Content Include="Scripts\Jquery\src\utils\isModifierEnabled.js" />
+    <Content Include="Scripts\Jquery\src\utils\isModifierRequired.js" />
+    <Content Include="Scripts\Jquery\src\utils\isNumeric.js" />
+    <Content Include="Scripts\Jquery\src\utils\isOffsetContainer.js" />
+    <Content Include="Scripts\Jquery\src\utils\removeEventListeners.js" />
+    <Content Include="Scripts\Jquery\src\utils\runModifiers.js" />
+    <Content Include="Scripts\Jquery\src\utils\setAttributes.js" />
+    <Content Include="Scripts\Jquery\src\utils\setStyles.js" />
+    <Content Include="Scripts\Jquery\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\Jquery\umd\popper-utils.js" />
+    <Content Include="Scripts\Jquery\umd\popper-utils.min.js" />
+    <Content Include="Scripts\Jquery\umd\popper.js" />
+    <Content Include="Scripts\Jquery\umd\popper.min.js" />
+    <Content Include="Scripts\Landing.js" />
+    <Content Include="Scripts\Offer.js" />
+    <Content Include="Scripts\Owl\owl.carousel.min.js" />
+    <Content Include="Scripts\Parking.js" />
+    <Content Include="Scripts\uikit-icons.min.js" />
+    <Content Include="Scripts\uikit.min.js" />
+    <Content Include="Styles\about.css" />
+    <Content Include="Styles\about.min.css" />
+    <Content Include="Styles\Admin\Orders.css" />
+    <Content Include="Styles\Admin\Orders.min.css">
+      <DependentUpon>Orders.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\landing.css" />
+    <Content Include="Styles\landing.min.css" />
+    <Content Include="Styles\Offer.css" />
+    <Content Include="Styles\Offer.min.css">
+      <DependentUpon>Offer.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Owl\owl.carousel.min.css" />
+    <Content Include="Styles\Owl\owl.theme.default.min.css" />
+    <Content Include="Styles\product.css" />
+    <Content Include="Styles\product.min.css" />
+    <Content Include="Styles\uikit.min.css" />
+    <Content Include="View\About.html" />
+    <Content Include="View\Admin\TblStart.html" />
+    <Content Include="View\Admin\TblCoop.html" />
+    <Content Include="View\Admin\TblHelp.html" />
+    <Content Include="View\Dynamic\Project.html" />
+    <Content Include="View\Landing.html" />
+    <Content Include="View\offers\ASP3.html" />
+    <Content Include="View\offers\ASP2.html" />
+    <Content Include="View\offers\ASP1.html" />
+    <Content Include="View\offers\word-press-two.html" />
+    <Content Include="View\Products\DigiDarman.html" />
+    <Content Include="View\Products\Parking.html" />
+    <Content Include="View\offers\word-press-one.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CoopController.cs" />
+    <Compile Include="Controllers\HelpController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\StartController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dto\DtoTblCoop.cs" />
+    <Compile Include="Models\Dto\DtoTblHelp.cs" />
+    <Compile Include="Models\Dto\DtoTblProduct.cs" />
+    <Compile Include="Models\Dto\DtoTblStart.cs" />
+    <Compile Include="Models\Regular\TblCoop.cs" />
+    <Compile Include="Models\Regular\TblHelp.cs" />
+    <Compile Include="Models\Regular\TblProduct.cs" />
+    <Compile Include="Models\Regular\TblStart.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Api\ICoopRepo.cs" />
+    <Compile Include="Repositories\Api\IHelpRepo.cs" />
+    <Compile Include="Repositories\Api\IProductRepo.cs" />
+    <Compile Include="Repositories\Api\IStartRepo.cs" />
+    <Compile Include="Repositories\Impl\CoopRepo.cs" />
+    <Compile Include="Repositories\Impl\HelpRepo.cs" />
+    <Compile Include="Repositories\Impl\ProductRepo.cs" />
+    <Compile Include="Repositories\Impl\StartRepo.cs" />
+    <Compile Include="Services\Api\ICoopService.cs" />
+    <Compile Include="Services\Api\IHelpService.cs" />
+    <Compile Include="Services\Api\IProductService.cs" />
+    <Compile Include="Services\Api\IStartService.cs" />
+    <Compile Include="Services\Impl\CoopService.cs" />
+    <Compile Include="Services\Impl\HelpService.cs" />
+    <Compile Include="Services\Impl\ProductService.cs" />
+    <Compile Include="Services\Impl\StartService.cs" />
+    <Compile Include="Utilities\Config.cs" />
+    <Compile Include="Utilities\MainProvider.cs" />
+    <Compile Include="Utilities\MethodRepo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="compilerconfig.json" />
+    <Content Include="Ignore\Sass\about.scss" />
+    <Content Include="Ignore\Sass\landing.scss" />
+    <Content Include="Ignore\Sass\product.scss" />
+    <Content Include="Ignore\Sass\_colors.scss" />
+    <Content Include="Ignore\Sass\_controls.scss" />
+    <Content Include="Ignore\Sass\_global.scss" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\Jquery\esm\popper-utils.js.map" />
+    <Content Include="Scripts\Jquery\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\Jquery\esm\popper.js.map" />
+    <Content Include="Scripts\Jquery\esm\popper.min.js.map" />
+    <Content Include="Scripts\Jquery\index.js.flow" />
+    <Content Include="Scripts\Jquery\jquery-3.5.1.min.map" />
+    <Content Include="Scripts\Jquery\jquery-3.5.1.slim.min.map" />
+    <Content Include="Scripts\Jquery\umd\popper-utils.js.map" />
+    <Content Include="Scripts\Jquery\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\Jquery\umd\popper.js.flow" />
+    <Content Include="Scripts\Jquery\umd\popper.js.map" />
+    <Content Include="Scripts\Jquery\umd\popper.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\Jquery\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54061</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44399/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

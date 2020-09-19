@@ -1,0 +1,291 @@
+﻿@import '_colors.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    float: none;
+    overflow-x: hidden;
+    font-family: 'Segoe UI';
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* width */
+    ::-webkit-scrollbar {
+        width: 1vw;
+        min-width: 6px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $ScrollbarTrack;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $ScrollbarHandle;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: lighten($ScrollbarHandle, 10%);
+        transition: all ease 0.2s;
+    }
+}
+
+
+p {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: $Text;
+}
+
+
+
+body {
+    background: $Background;
+}
+
+@mixin center() {
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.center {
+    @include center();
+}
+
+
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+.alert {
+    flex: 1;
+    color: $Alert;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.collapsed {
+    height: 0 !important;
+    width: 0 !important;
+    flex: 0 !important;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.unselectable {
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-drag: none !important;
+    -webkit-user-select: none !important;
+    -ms-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+}
+
+img {
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-drag: none !important;
+    -webkit-user-select: none !important;
+    -ms-user-select: none !important;
+    pointer-events: none !important;
+}
+
+.link {
+    color: $link;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: lighten($link, 30%);
+}
+
+.link:active {
+    color: lighten($CallToAction, 30%);
+}
+
+
+.dummy {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+
+.uk-notification-message {
+    div{
+        font-size:20px!important;
+        text-align:right;
+        direction:rtl;
+    }
+}
+
+.space-mobile {
+    visibility: collapse;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        width: 100vw;
+        height: 10vw;
+    }
+}
+
+.space-desktop {
+    width: 100vw;
+    height: 4vw;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        visibility: collapse;
+    }
+}
+
+.form {
+    @include shadow-medium;
+    background: $FormBackground;
+    border-radius: 3px;
+    margin: 12px;
+}
+
+
+.title {
+    margin: 0;
+    padding: 4px;
+
+    p {
+        font-size: 3vw;
+        color: #848484;
+    }
+
+    img {
+        width: 18vw;
+        overflow: no-display;
+        margin: 8px auto 0 auto !important;
+    }
+}
+
+@media only screen and (min-device-width : 0px) and (max-device-width : 568px) {
+    .title {
+
+        p {
+            font-size: 5vw;
+        }
+
+        img {
+            width: 50vw;
+            overflow: no-display;
+            margin: 8px auto 0 auto !important;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-align-content: space-between;
+    -webkit-align-content: space-between;
+    align-content: space-between;
+    border-top: solid $Footer-border 1px;
+    background: $Footer-background;
+    width: 100vw;
+    height: 40vw;
+
+    .map {
+        width: 50vw;
+        height: 40vw;
+    }
+
+    .column {
+        margin: 4vw;
+        float: right;
+
+        .contact {
+            align-self: flex-start;
+            margin: 1vw auto;
+
+            p {
+                text-align: center !important;
+                align-self: center;
+                vertical-align: central;
+                text-align: center;
+                font-size: 1.5vw;
+            }
+
+            img {
+                margin: auto;
+                width: 3vw;
+                height: 3vw;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    footer {
+        display: flex;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -ms-align-content: space-between;
+        -webkit-align-content: space-between;
+        align-content: space-between;
+        height: auto;
+
+        .map {
+            width: 100vw;
+            height: 30vh;
+        }
+
+        .column {
+            margin: 4vw;
+            float: none;
+
+
+            .contact {
+                align-self: flex-start;
+                margin: 2vh auto;
+
+                p {
+                    font-size: 4vw;
+                }
+
+                img {
+                    margin-bottom: 2vh;
+                    width: 9vw;
+                    height: 9vw;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    display: block;
+    text-align: center;
+    font-size: .8vw;
+    background: $Footer-background;
+    color: rgba(0, 0, 0, 0.25);
+    z-index: 100;
+    margin: 0 auto 4px auto;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .copyright {
+        font-size: 1.2vw;
+    }
+}

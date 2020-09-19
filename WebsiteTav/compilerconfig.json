@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "Styles/landing.css",
+    "inputFile": "Ignore/Sass/landing.scss"
+  },
+  {
+    "outputFile": "Styles/about.css",
+    "inputFile": "Ignore/Sass/about.scss"
+  },
+  {
+    "outputFile": "Styles/product.css",
+    "inputFile": "Ignore/Sass/product.scss"
+  },
+  {
+    "outputFile": "Styles/Offer.css",
+    "inputFile": "Ignore/Sass/Offer.scss"
+  },
+  {
+    "outputFile": "Styles/Admin/Orders.css",
+    "inputFile": "Ignore/Sass/Admin/Orders.scss"
+  }
+]

@@ -1,0 +1,108 @@
+﻿@import '_colors.scss';
+@import '_controls.scss';
+@import '_layout.scss';
+
+* {
+    overflow-y: hidden;
+}
+
+html {
+    overflow-y: visible !important;
+}
+
+
+.card {
+    background: #fff;
+    padding: 2vw 3vw 2vw 3vw;
+    width: 64vw;
+
+    header {
+        font-size: 2.4vw;
+        text-align: right;
+        margin-bottom: 16px;
+    }
+
+    p {
+        margin-top: 10px;
+        text-align: right;
+        font-size: 1.2vw;
+        text-align: justify;
+    }
+}
+
+.main {
+    width: 70vw;
+
+    > img {
+        flex: 1;
+        margin-right: 8px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+
+    .card {
+        padding: 2vw 3vw 2vw 3vw;
+        flex: 1;
+
+        ul {
+            li {
+                text-decoration: solid;
+                list-style-type: circle;
+                margin: 3px;
+                font-size: 1.2vw;
+                text-align: right;
+            }
+        }
+
+        .submit {
+            margin-top: 2vw;
+            font-size: 2.2vw;
+            align-self: flex-end;
+        }
+    }
+}
+
+.screenshots {
+    width: 70vw;
+    height: 50vw;
+
+    img {
+        margin-right: 8px;
+        flex: 1;
+    }
+
+    .column {
+        flex: 1;
+
+        .column:first-child {
+            margin-bottom: 60px !important;
+        }
+
+        img {
+            flex: 1;
+        }
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .card {
+        width: 89vw;
+    }
+
+    .main {
+        width: 95vw;
+
+        ul {
+            li {
+                font-size: 2vw;
+            }
+        }
+    }
+
+    .screenshots {
+        width: 95vw;
+    }
+
+}
