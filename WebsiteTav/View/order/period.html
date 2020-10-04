@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>سفارش ها</title>
+
+    <link rel="icon" href=" /Resources/Svg/favIcon.svg" />
+    <link href="../../Ignore/Sass/orderPage.min.css" rel="stylesheet" />
+
+    <link href=" /Styles/Owl/owl.carousel.min.css" rel="stylesheet" />
+    <link href=" /Styles/Owl/owl.theme.default.min.css" rel="stylesheet" />
+    <!--Uikit-->
+    <link href="/Styles/uikit.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <link href=" /Resources/Font/stylesheet.css" rel="stylesheet" />
+    <script src=" /Scripts/General.js"></script>
+
+    <script src=" /Scripts/Jquery/jquery-3.5.1.js"></script>
+    <script src=" /Scripts/Owl/owl.carousel.min.js"></script>
+
+    <!-- #region Out -->
+    <!--BEGIN RAYCHAT CODE-->
+    <script type="text/javascript">!function () { function t() { var t = document.createElement("script"); t.type = "text/javascript", t.async = !0, localStorage.getItem("rayToken") ? t.src = "https://app.raychat.io/scripts/js/" + o + "?rid=" + localStorage.getItem("rayToken") + "&href=" + window.location.href : t.src = "https://app.raychat.io/scripts/js/" + o; var e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(t, e) } var e = document, a = window, o = "c7fb7266-6925-40ea-b67e-3289472d3be9"; "complete" == e.readyState ? t() : a.attachEvent ? a.attachEvent("onload", t) : a.addEventListener("load", t, !1) }();</script>
+    <!-- Hotjar Tracking Code for https://www.arvintavco.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1868546, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+        /**/</script>
+    <!-- #endregion -->
+
+    <script src="/Scripts/uikit-icons.min.js"></script>
+    <script src="/Scripts/uikit.min.js"></script>
+</head>
+<body>
+    <!-- #region Nav -->
+
+    <nav class="row">
+        <a href="Landing.html" class="logo">
+            <img class="fillheight center" src="/Resources/Svg/ArvinTavLogo.svg" />
+        </a>
+        <section class="row">
+            <a href="../Landing.html" class="row">
+                خانه
+                <img src="/Resources/Svg/Icons/Home.svg" class="center" />
+            </a>
+
+        </section>
+    </nav>
+    <div class="space"></div>
+    <div class="space-desktop"></div>
+    <div class="space-mobile"></div>
+    <!-- #endregion -->
+    <!--<label id="rangeCount" class="hover ">
+        20
+    </label>-->
+
+
+    <div class="order-container column clipped ">
+        <h3 class="center">سفارش سرویس</h3>
+        <div class="space-half"></div>
+        <div class="row center" dir="rtl">
+            <div class="column workflow">
+
+                <button onclick="btnChoosePlan_Click()" class=" workflowItem " dir="rtl">1</button>
+                <label class="test">انتخاب پلن</label>
+            </div>
+            <div class="line"></div>
+            <div class="column workflow">
+                <button onclick="periodOfPlan_Click()" class="current  workflowItem" dir="rtl">2</button>
+                <label class="test">انتخاب دوره</label>
+            </div>
+            <div class="line"></div>
+            <div class="column workflow">
+                <button onclick="finish_Click()" class="workflowItem" dir="rtl">3</button>
+                <label class="test">تایید و پرداخت</label>
+            </div>
+        </div>
+
+        <div class="space"></div>
+        <h3 class="center">دوره سرویس</h3>
+        <select id="periodOfservice" onchange="periodPrice()" dir="rtl">
+            <option value="1">1 ماهه </option>
+            <option value="3">3 ماهه </option>
+            <option value="6">6 ماهه </option>
+            <option value="9" selected>9 ماهه </option>
+        </select>
+        <hr />
+        <div class="space"></div>
+        <div class="row">
+            <button class="confirm uk-margin-auto-right " onclick="window.location = 'finish.html'" dir="rtl"> تایید و ادامه</button>
+            <div class="column">
+                <label>قیمت کل </label>
+                <label id="totalPrice" dir="rtl"></label>
+            </div>
+
+        </div>
+        <div class="space-mobile"></div>
+        <div class="space-double"></div>
+        <div class="space-double"></div>
+        <div class="space-double"></div>
+        <div class="space-double"></div>
+        <div class="space-double"></div><div class="space-double"></div>
+    </div>
+    <script src="../../Scripts/orders/period.js"></script>
+    <script src="../../Scripts/orders/navigation.js"></script>
+</body>
+</html>

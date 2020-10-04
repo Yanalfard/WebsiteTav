@@ -90,6 +90,12 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Ignore\Idol.html" />
+    <Content Include="Ignore\Sass\orderPage.css">
+      <DependentUpon>orderPage.scss</DependentUpon>
+    </Content>
+    <Content Include="Ignore\Sass\orderPage.min.css">
+      <DependentUpon>orderPage.css</DependentUpon>
+    </Content>
     <Content Include="JsDecoder\BjaxLib.js" />
     <Content Include="JsDecoder\CoopJore.js" />
     <Content Include="JsDecoder\HelpJore.js" />
@@ -100,9 +106,10 @@
     <Content Include="Resources\Jpg\Ahmadzade.jpg" />
     <Content Include="Resources\Jpg\asp.net_.jpg" />
     <Content Include="Resources\Jpg\Gerami.jpg" />
-    <Content Include="Resources\Jpg\Lemi.jpg" />
+    <Content Include="Resources\Jpg\Milad.jpg" />
     <Content Include="Resources\Jpg\Sahandi.jpg" />
     <Content Include="Resources\Jpg\Woman.jpg" />
+    <Content Include="Resources\Jpg\Yashar.jpg" />
     <Content Include="Resources\Png\Asp.png" />
     <Content Include="Resources\Png\Icon.png" />
     <Content Include="Resources\Png\Parking\ParkingDark.png" />
@@ -111,6 +118,8 @@
     <Content Include="Resources\Png\Parking\ParkingVertical.png" />
     <Content Include="Resources\Png\WordPress.png" />
     <Content Include="Resources\Svg\ArvinTavLogo.svg" />
+    <Content Include="Resources\Svg\Avatar_Female.svg" />
+    <Content Include="Resources\Svg\Avatar_Male.svg" />
     <Content Include="Resources\Svg\BackgroundProjects.svg" />
     <Content Include="Resources\Svg\CellPhone.svg" />
     <Content Include="Resources\Svg\DigiDarman.svg" />
@@ -177,6 +186,7 @@
     </None>
     <Content Include="Ignore\Sass\Offer.scss" />
     <Content Include="Ignore\Sass\Admin\Orders.scss" />
+    <Content Include="Ignore\Sass\orderPage.scss" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Resources\Font\iranian_sans-webfont.woff" />
     <Content Include="Resources\Font\iranian_sans-webfont.woff2" />
@@ -256,6 +266,10 @@
     <Content Include="Scripts\Jquery\umd\popper.min.js" />
     <Content Include="Scripts\Landing.js" />
     <Content Include="Scripts\Offer.js" />
+    <Content Include="Scripts\orders\finish.js" />
+    <Content Include="Scripts\orders\navigation.js" />
+    <Content Include="Scripts\orders\orders.js" />
+    <Content Include="Scripts\orders\period.js" />
     <Content Include="Scripts\Owl\owl.carousel.min.js" />
     <Content Include="Scripts\Parking.js" />
     <Content Include="Scripts\uikit-icons.min.js" />
@@ -287,6 +301,9 @@
     <Content Include="View\offers\ASP2.html" />
     <Content Include="View\offers\ASP1.html" />
     <Content Include="View\offers\word-press-two.html" />
+    <Content Include="View\order\finish.html" />
+    <Content Include="View\order\order.html" />
+    <Content Include="View\order\period.html" />
     <Content Include="View\Products\DigiDarman.html" />
     <Content Include="View\Products\Parking.html" />
     <Content Include="View\offers\word-press-one.html" />

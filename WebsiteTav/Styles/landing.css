@@ -102,7 +102,8 @@ p {
   color: #606060; }
 
 body {
-  background: #F0F0F2; }
+  background: #F0F0F2;
+  min-height: 100vh !important; }
 
 .center {
   text-align: center;
@@ -962,6 +963,7 @@ nav:hover {
     height: auto;
     width: 85vw; } }
 
+/**/
 .WhoWeAre {
   width: 100vw;
   margin: auto; }
@@ -972,114 +974,107 @@ nav:hover {
     text-align: justify;
     text-align-last: center;
     direction: rtl; }
-  .WhoWeAre .carousel {
-    margin: 3vh auto auto auto;
-    width: 85vw; }
-    .WhoWeAre .carousel-button {
-      position: absolute;
-      width: 11vh;
-      height: 11vh;
-      padding: 3vw 0;
-      align-content: center;
-      background: rgba(185, 185, 185, 0.32);
-      transition: all ease 0.5s; }
-      .WhoWeAre .carousel-button img {
-        width: 50%;
-        align-self: center; }
-    .WhoWeAre .carousel-content {
-      flex: 1;
-      display: flex;
-      flex-direction: row; }
-      .WhoWeAre .carousel-content .trigger-row {
-        display: flex;
-        flex-direction: row;
-        align-content: space-between;
-        align-self: center; }
-        .WhoWeAre .carousel-content .trigger-row .staff {
-          display: flex;
-          margin: 4vw !important;
-          flex-direction: column;
-          background: #fff;
-          height: 30vw;
-          width: 18vw;
-          -moz-box-shadow: rgba(72, 72, 72, 0.54) 0 0px 1.2vw;
-          -webkit-box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw;
-          box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw;
-          border-radius: 4px;
-          text-align: right;
-          margin: 2vw !important; }
-          .WhoWeAre .carousel-content .trigger-row .staff br {
-            height: 5px; }
-          .WhoWeAre .carousel-content .trigger-row .staff p {
-            margin: 8px 12px 4px 0; }
-          .WhoWeAre .carousel-content .trigger-row .staff-image {
-            flex: 4.8;
-            border-radius: 0 0 1.2vw 1.2vw;
-            -moz-box-shadow: rgba(72, 72, 72, 0.54) 0 0px 1.2vw;
-            -webkit-box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw;
-            box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw; }
-          .WhoWeAre .carousel-content .trigger-row .staff-name {
-            color: #606060;
-            font-weight: 400;
-            float: right; }
-          .WhoWeAre .carousel-content .trigger-row .staff-description {
-            flex: 3;
-            font-weight: 300;
-            font-size: 1.3vw;
-            padding-left: 8px; }
-          .WhoWeAre .carousel-content .trigger-row .staff-links {
-            display: flex;
-            flex-direction: row;
-            align-content: space-between; }
-            .WhoWeAre .carousel-content .trigger-row .staff-links .icon {
-              margin: 8px auto;
-              fill: red; }
-              .WhoWeAre .carousel-content .trigger-row .staff-links .icon object {
-                width: 1.5vw;
-                fill: red; }
-            .WhoWeAre .carousel-content .trigger-row .staff-links .icon:hover .img {
-              fill: #53C41C;
-              -moz-filter: drop-shadow(0px 0px 4px #53C41C);
-              -ms-filter: drop-shadow(0px 0px 4px #53C41C);
-              -webkit-filter: drop-shadow(0px 0px 4px #53C41C);
-              filter: drop-shadow(0px 0px 4px #53C41C); }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+.staff {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 4px;
+  text-align: right;
+  margin: 12px auto;
+  -moz-box-shadow: rgba(72, 72, 72, 0.36) 0 0px 0.4vw;
+  -webkit-box-shadow: rgba(72, 72, 72, 0.36) 0 0px 0.4vw;
+  box-shadow: rgba(72, 72, 72, 0.36) 0 0px 0.4vw; }
+  .staff br {
+    height: 5px; }
+  .staff p {
+    margin: 8px 12px 4px 0; }
+  .staff-image {
+    height: 224px;
+    width: auto;
+    -moz-box-shadow: rgba(72, 72, 72, 0.54) 0 0px 1.2vw;
+    -webkit-box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw;
+    box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center; }
+  .staff-name {
+    color: #606060;
+    font-weight: 400;
+    float: right; }
+  .staff-description {
+    flex: 3;
+    font-weight: 300;
+    font-size: 1.3vw;
+    padding-left: 8px; }
+  .staff-links {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between; }
+    .staff-links .icon {
+      margin: 8px auto;
+      fill: red; }
+      .staff-links .icon object {
+        width: 1.5vw;
+        fill: red; }
+    .staff-links .icon:hover .img {
+      fill: #53C41C;
+      -moz-filter: drop-shadow(0px 0px 4px #53C41C);
+      -ms-filter: drop-shadow(0px 0px 4px #53C41C);
+      -webkit-filter: drop-shadow(0px 0px 4px #53C41C);
+      filter: drop-shadow(0px 0px 4px #53C41C); }
+
+@media only screen and (min-width: 825px) {
+  .staff {
+    width: 256px;
+    height: 380px; }
+    .staff-image {
+      height: 228px; } }
+
+@media only screen and (max-width: 824px) {
+  .staff {
+    width: 180px !important;
+    height: 240px !important; }
+    .staff-image {
+      height: 144px; } }
+
+@media only screen and (max-width: 512px) {
+  .staff {
+    width: 124px !important;
+    height: 180px !important; }
+    .staff-image {
+      height: 108px; } }
+
+@media only screen and (max-device-width: 624px) {
   .WhoWeAre {
     background: #ebebed;
     padding-bottom: 3vw; }
-    .WhoWeAre .carousel {
-      margin: 3vh auto auto auto;
-      width: 100vw; }
-      .WhoWeAre .carousel-content {
-        flex-direction: column; }
-        .WhoWeAre .carousel-content .trigger-row {
-          margin: 0 24vw !important; }
-          .WhoWeAre .carousel-content .trigger-row .staff {
-            height: 76vw;
-            width: 45vw; }
-            .WhoWeAre .carousel-content .trigger-row .staff p {
-              font-size: 4vw;
-              margin: 8px 12px 4px 0; }
-            .WhoWeAre .carousel-content .trigger-row .staff-image {
-              flex: 5;
-              border-radius: 0 0 1.2vw 1.2vw;
-              -moz-box-shadow: rgba(72, 72, 72, 0.54) 0 0px 1.2vw;
-              -webkit-box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw;
-              box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw; }
-            .WhoWeAre .carousel-content .trigger-row .staff-name {
-              color: #606060;
-              font-weight: bold;
-              float: right; }
-            .WhoWeAre .carousel-content .trigger-row .staff-description {
-              flex: 3; }
-            .WhoWeAre .carousel-content .trigger-row .staff-links .icon {
-              margin: 8px auto;
-              fill: red; }
-              .WhoWeAre .carousel-content .trigger-row .staff-links .icon object {
-                width: 2vw;
-                fill: red; } }
+    .WhoWeAre .staff {
+      width: 30vw;
+      height: 50vw; }
+      .WhoWeAre .staff p {
+        font-size: 26px;
+        margin: 8px 12px 4px 0; }
+      .WhoWeAre .staff-image {
+        flex: 5;
+        -moz-box-shadow: rgba(72, 72, 72, 0.54) 0 0px 1.2vw;
+        -webkit-box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw;
+        box-shadow: rgba(72, 72, 72, 0.64) 0 0px 0.8vw; }
+      .WhoWeAre .staff-name {
+        color: #606060;
+        font-weight: bold;
+        float: right; }
+      .WhoWeAre .staff-description {
+        flex: 3; }
+      .WhoWeAre .staff-links .icon {
+        margin: 8px auto;
+        fill: red; }
+        .WhoWeAre .staff-links .icon object {
+          width: 2vw;
+          fill: red; } }
 
+/**/
 .projects .background-svg {
   /*height: 84.5vh;*/
   position: absolute;
@@ -1403,3 +1398,6 @@ nav:hover {
     width: 50vw;
     height: 65vw;
     margin: 6vw auto !important; } }
+
+.offers h6 {
+  text-align: center; }

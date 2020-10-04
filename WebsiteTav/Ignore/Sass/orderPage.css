@@ -932,55 +932,288 @@ nav:hover {
 .padding {
   padding: 16px !important; }
 
-.description {
-  width: 85%;
-  margin-top: 4px;
-  font-size: 1.5vw;
-  text-align: justify;
-  text-align-last: center; }
+.order-container {
+  overflow-x: visible !important; }
+  .order-container * {
+    overflow: hidden; }
 
-.media {
-  margin: auto;
-  width: 16vw;
-  align-content: space-between; }
-  .media-icon {
-    width: 75%; }
+.workflow .workflowItem {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  border: 1px solid #a8a8a8;
+  font-size: 24px !important;
+  padding: 10px;
+  color: #808080 !important;
+  text-align: center !important;
+  outline: none !important; }
+  .workflow .workflowItem span {
+    position: absolute; }
 
-.map {
-  width: 100vw;
-  background: rgba(223, 223, 223, 0.85);
-  height: 38vw; }
+.workflow button:hover {
+  opacity: 0.7;
+  text-decoration: none; }
 
-.contact {
-  margin: 2vw; }
-  .contact-icon {
-    width: 4vw;
-    height: 4vw; }
+.workflow .current {
+  background: #66BB6A;
+  border-color: #66BB6A;
+  color: white !important; }
 
-.email {
-  margin: auto !important;
-  width: 20vw;
-  height: 30vw;
-  padding: 2vw !important; }
-  .email text {
-    margin: 0.8vw !important; }
+.workflow label {
+  font-size: small;
+  padding: 0;
+  margin: 0; }
 
-#text {
-  height: 12vw; }
-  #text .text-underline {
-    height: 0.4vw;
-    flex: 0.2; }
+@media only screen and (max-device-width: 600px) {
+  .workflow .workflowItem {
+    height: 88px;
+    width: 88px;
+    font-size: 32px !important;
+    padding: 10px; }
+  .workflow label {
+    font-size: 20px !important; }
+  .workflow .line {
+    height: 20px !important; } }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  .contact {
-    margin: 3vw; }
-    .contact-icon {
-      width: 6vw;
-      height: 6vw; }
-    .contact-info {
-      font-size: 3.5vw; }
-  .email {
-    margin: auto !important;
-    width: 46vw;
-    height: 65vw;
-    padding: 2vw; } }
+.line {
+  width: 24vw;
+  height: 34px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 3px solid #cfcbcb; }
+
+p {
+  font-size: 14px;
+  padding: 10px; }
+
+ul {
+  font-size: 14px;
+  background: #b8d49b;
+  list-style-type: circle !important;
+  list-style-position: inside;
+  padding: 30px; }
+  ul li {
+    font-size: 14px;
+    padding-right: 10px; }
+
+@media only screen and (max-device-width: 600px) {
+  p {
+    font-size: 20px; }
+  ul {
+    font-size: 22px; }
+    ul li {
+      font-size: 20px; } }
+
+/*.serviceType {
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #62b140;
+    margin: auto;
+}
+*/
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 0.8em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px 2vw; }
+
+.cases {
+  width: 250px;
+  height: 360px;
+  /* button {
+        width: 100px;
+        background: #699f52;
+        border-radius: 20px;
+        font-size: 14px;
+        padding: 5px;
+        margin: auto;
+        color: white;
+        border: none;
+    }
+
+    button:hover {
+        background: red;
+    }*/ }
+  .cases ul {
+    background: white; }
+  .cases h5 {
+    padding: 10px;
+    background: #57AE46;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center; }
+  .cases label {
+    font-size: 20px;
+    color: #699f52;
+    font-weight: bold; }
+    .cases label span {
+      font-size: 12px; }
+  .cases button {
+    background: #57AE46;
+    padding: 8px;
+    font-size: medium;
+    border: 0;
+    width: 140px;
+    color: white;
+    opacity: 1;
+    transition: 0.3s;
+    margin: auto; }
+  .cases button:hover {
+    opacity: 0.7; }
+
+#ser-two {
+  display: none; }
+
+#ser-three {
+  display: none; }
+
+#ser-four {
+  display: none; }
+
+/*.hover {
+    position: fixed;
+    padding: 16px;
+    background: red;
+    left: 50px;
+    top: 100px;
+}
+
+.range {
+    width: 100% !important;
+}
+
+.range-control {
+
+
+    #inputRange {
+        width: 100% !important;
+    }
+}*/
+@media only screen and (max-device-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 0.8em;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    padding: 20px 2vw; }
+  .cases {
+    width: 310px;
+    height: 400px; }
+    .cases button {
+      font-size: 22px !important; }
+  h5 {
+    font-size: 34px;
+    font-weight: 400;
+    padding: 14px; }
+  label {
+    font-size: 24px;
+    font-weight: bold; }
+    label span {
+      font-size: 16px; } }
+
+.slidecontainer {
+  width: 100%; }
+  .slidecontainer label {
+    font-size: 14px !important;
+    margin: 0 8px !important; }
+
+#outvalue {
+  font-size: 20px !important;
+  color: #4CAF50; }
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-top: 3px; }
+
+.slider:hover {
+  opacity: 1; }
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer; }
+
+#periodOfservice {
+  width: 35vw;
+  padding: 16px;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 16px; }
+  #periodOfservice option {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px !important;
+    margin: auto; }
+
+@media only screen and (max-device-width: 600px) {
+  #periodOfservice {
+    font-size: 24px; }
+    #periodOfservice option {
+      font-size: 14px;
+      font-weight: 100; } }
+
+#totalPrice {
+  color: #dd1717; }
+
+.confirm {
+  background: #57AE46;
+  padding: 5px;
+  font-size: medium;
+  border: 0;
+  width: 140px;
+  height: 40px;
+  color: white;
+  opacity: 1;
+  transition: 0.3s; }
+
+.confirm:hover {
+  opacity: 0.7; }
+
+@media only screen and (max-device-width: 600px) {
+  .confirm {
+    font-size: 22px !important;
+    padding: 8px;
+    width: 150px;
+    height: 50px; } }
+
+table {
+  margin-top: 5px; }
+  table th {
+    padding: 5px;
+    font-size: 12px;
+    text-align: right !important; }
+  table td {
+    padding: 5px;
+    text-align: right !important;
+    font-size: 12px; }
+  table tr:nth-child(even) {
+    background-color: #cfcbcb; }
+
+.tableLabel {
+  font-size: 16px;
+  font-weight: 400; }
+
+@media only screen and (max-device-width: 600px) {
+  table th {
+    font-size: 24px; }
+  table td {
+    font-size: 22px; }
+  .tableLabel {
+    font-size: 20px; } }

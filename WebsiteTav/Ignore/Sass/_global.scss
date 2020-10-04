@@ -43,6 +43,7 @@ p {
 
 body {
     background: $Background;
+    min-height:100vh!important;
 }
 
 @mixin center() {

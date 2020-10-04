@@ -1,0 +1,898 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>سفارش ها</title>
+
+    <link rel="icon" href=" /Resources/Svg/favIcon.svg" />
+    <link href="../../Ignore/Sass/orderPage.min.css" rel="stylesheet" />
+
+    <link href=" /Styles/Owl/owl.carousel.min.css" rel="stylesheet" />
+    <link href=" /Styles/Owl/owl.theme.default.min.css" rel="stylesheet" />
+    <!--Uikit-->
+    <link href="/Styles/uikit.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <link href=" /Resources/Font/stylesheet.css" rel="stylesheet" />
+    <script src=" /Scripts/General.js"></script>
+
+    <script src=" /Scripts/Jquery/jquery-3.5.1.js"></script>
+    <script src=" /Scripts/Owl/owl.carousel.min.js"></script>
+
+
+    <!-- #region Out -->
+    <!--BEGIN RAYCHAT CODE-->
+    <script type="text/javascript">!function () { function t() { var t = document.createElement("script"); t.type = "text/javascript", t.async = !0, localStorage.getItem("rayToken") ? t.src = "https://app.raychat.io/scripts/js/" + o + "?rid=" + localStorage.getItem("rayToken") + "&href=" + window.location.href : t.src = "https://app.raychat.io/scripts/js/" + o; var e = document.getElementsByTagName("script")[0]; e.parentNode.insertBefore(t, e) } var e = document, a = window, o = "c7fb7266-6925-40ea-b67e-3289472d3be9"; "complete" == e.readyState ? t() : a.attachEvent ? a.attachEvent("onload", t) : a.addEventListener("load", t, !1) }();</script>
+    <!-- Hotjar Tracking Code for https://www.arvintavco.com -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1868546, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+
+        /**/</script>
+    <!-- #endregion -->
+
+    <script src="/Scripts/uikit-icons.min.js"></script>
+    <script src="/Scripts/uikit.min.js"></script>
+</head>
+<body>
+    <!-- #region Nav -->
+
+    <nav class="row">
+        <a href="Landing.html" class="logo">
+            <img class="fillheight center" src="/Resources/Svg/ArvinTavLogo.svg" />
+        </a>
+        <section class="row">
+            <a href="../Landing.html" class="row">
+                خانه
+                <img src="/Resources/Svg/Icons/Home.svg" class="center" />
+            </a>
+
+        </section>
+    </nav>
+    <div class="space"></div>
+    <div class="space-desktop"></div>
+    <div class="space-mobile"></div>
+    <!-- #endregion -->
+    <!--<label id="rangeCount" class="hover ">
+        20
+    </label>-->
+
+
+    <div class="order-container column clipped ">
+        <h3 class="center">سفارش سرویس</h3>
+        <div class="space-half"></div>
+        <div class="row center" dir="rtl">
+            <div class="column workflow">
+                <button onclick="btnChoosePlan_Click()" class="current workflowItem" dir="rtl">
+                    1
+                </button>
+                <label class="test">انتخاب پلن</label>
+            </div>
+            <div class="line"></div>
+            <div class="column workflow">
+                <button onclick="periodOfPlan_Click()" class="workflowItem" dir="rtl">
+                    2
+                </button>
+                <label class="test">انتخاب دوره</label>
+            </div>
+            <div class="line"></div>
+            <div class="column workflow">
+                <button onclick="finish_Click()" class="workflowItem" dir="rtl">3</button>
+                <label class="test">تایید و پرداخت</label>
+            </div>
+        </div>
+
+        <div class="space"></div>
+        <p class="mat" dir="rtl">
+            جهت آشنایی با مفاهیم پلن‌ها مانند نفرساعت، ظرفیت، دوره، اعتبار زمانی، کاربر همزمان و ضوابط فروش مانند تمدید، ارتقا و انتقال شارژ لطفا با ما تماس بگیرید..
+        </p>
+
+        <ul class="mat" dir="rtl">
+            در کلیه سرویس‌ها می توانید
+            <li> کلاس ایجاد کنید (مثلا برای هر درس یا هر استاد یک کلاس)</li>
+            <li>نامحدود کاربر ایجاد کنید (برای هر دانش‌آموز / دانشجو یک کاربر</li>
+            <li> ویدیو همزمان شامل تصویر وبکم و اشتراک دسکتاپ است (تصویر استاد و ۲ شاگرد)</li>
+            <li> در هر کلاس می توانید ۳ ویدیو همزمان فعال کنید (برای ۳ کلاس همزمان ۹ ویدیو مجاز است)</li>
+        </ul>
+        <div class="space-half"></div>
+
+        <div class="slidecontainer">
+            <p dir="rtl">تعداد کاربران را از 5 تا 200 کاربر انتخاب کنید:</p>
+            <div class="row">
+                <label>200</label>
+                <input type="range" min="5" max="200" value="5" class="slider" id="myRange" dir="rtl">
+                <label>5</label>
+            </div>
+            <p dir="rtl">تعداد نفرات: <span id="outvalue"></span></p>
+        </div>
+
+        <!--<form>
+
+            <div class="range-control row">
+
+                <label>160</label>
+                <input id="inputRange" type="range" min="0" max="160" step="5" class="uk-margin-right"
+                       value="40" data-thumbwidth="20" oninput="showservice(this.value )" dir="rtl">
+                <output name="rangeVal">50</output>
+                <label>0</label>
+            </div>
+
+        </form>-->
+        <!--<input type="range" class="range" min="5" max="160" step="1" value="40"
+        oninput="showservice(this.value )"
+        onmousemove="range_mouseMove(event)" dir="rtl" />-->
+        <!--<div class="row" dir="rtl">
+            <button class="serviceType" id="service-one" onclick="display('one') ">سرویس 1</button>
+            <button class="serviceType" id="service-two" onclick="display('two') ">سرویس 2</button>
+            <button class="serviceType" id="service-three" onclick="display('three') ">سرویس 3</button>
+            <button class="serviceType" id="service-four" onclick="display('four') ">سرویس 4</button>
+        </div>-->
+        <!--service one-->
+        <content class="grid" id="ser-one" dir="rtl">
+            <article class="mat cases column clipped ">
+                <h5>سرویس 5 کاربره</h5>
+                <ul>
+                    <li>تا 5 کاربر همزمان</li>
+                    <li> 5 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">13,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="13000"
+                        user="تا 5 کاربر همزمان"
+                        time="5 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+
+                <!--<button onclick=" window.location = 'period.html'  "> انتخاب پلن</button>-->
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 10 کاربره</h5>
+                <ul>
+                    <li>تا 10 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+                <label class="center">23,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="23000"
+                        user="تا 10 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 10 کاربره</h5>
+                <ul>
+                    <li>تا 10 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">32,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="32000"
+                        user="تا 10 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 20 کاربره</h5>
+                <ul>
+                    <li>تا 20 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">40,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="40000"
+                        user="تا 20 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 20 کاربره</h5>
+                <ul>
+                    <li>تا 20 کاربر همزمان</li>
+                    <li> 20 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">65,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="65000"
+                        user="تا 20 کاربر همزمان"
+                        time="20 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 30 کاربره</h5>
+                <ul>
+                    <li>تا 30 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">56,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="56000"
+                        user="تا 30 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 30 کاربره</h5>
+                <ul>
+                    <li>تا 30 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">91,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="91000"
+                        user="تا 30 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 40 کاربره</h5>
+                <ul>
+                    <li>تا 40 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">73,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="73000"
+                        user="تا 40 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 40 کاربره</h5>
+                <ul>
+                    <li>تا 40 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">117,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="117000"
+                        user="تا 40 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 50 کاربره</h5>
+                <ul>
+                    <li>تا 50 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">90,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="90000"
+                        user="تا 50 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 50 کاربره</h5>
+                <ul>
+                    <li>تا 50 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">145,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="145000"
+                        user="تا 50 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+        </content>
+        <!-- end service one-->
+        <!--service two-->
+        <content class="grid" id="ser-two" dir="rtl">
+            <article class="mat cases column clipped ">
+                <h5>سرویس 55 کاربره</h5>
+                <ul>
+                    <li>تا 55 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">120,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="120000"
+                        user="تا 55 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 55 کاربره</h5>
+                <ul>
+                    <li>تا 55 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">155,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="155000"
+                        user="تا 55 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 60 کاربره</h5>
+                <ul>
+                    <li>تا 60 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">150,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="150000"
+                        user="تا 60 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 60 کاربره</h5>
+                <ul>
+                    <li>تا 60 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">170,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="170000"
+                        user="تا 60 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 70 کاربره</h5>
+                <ul>
+                    <li>تا 70 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">160,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="160000"
+                        user="تا 70 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 70 کاربره</h5>
+                <ul>
+                    <li>تا 70 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">180,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="180000"
+                        user="تا 70 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 80 کاربره</h5>
+                <ul>
+                    <li>تا 80 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">170,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="170000"
+                        user="تا 80 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 80 کاربره</h5>
+                <ul>
+                    <li>تا 80 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">217,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="217000"
+                        user="تا 80 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 90 کاربره</h5>
+                <ul>
+                    <li>تا 90 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">180,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="180000"
+                        user="تا 90 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 90 کاربره</h5>
+                <ul>
+                    <li>تا 90 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">230,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="230000"
+                        user="تا 90 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 100 کاربره</h5>
+                <ul>
+                    <li>تا 100 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">185,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="185000"
+                        user="تا 100 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 100 کاربره</h5>
+                <ul>
+                    <li>تا 100 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">260,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="260000"
+                        user="تا 100 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+        </content>
+        <!--end service two-->
+        <!--service three-->
+        <content class="grid" id="ser-three" dir="rtl">
+
+            <article class="mat cases column clipped ">
+                <h5>سرویس 110 کاربره</h5>
+                <ul>
+                    <li>تا 110 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">195,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="195000"
+                        user="تا 110 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 110 کاربره</h5>
+                <ul>
+                    <li>تا 110 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">280,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="280000"
+                        user="تا110 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 120 کاربره</h5>
+                <ul>
+                    <li>تا 120 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">205,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="205000"
+                        user="تا 120 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 120 کاربره</h5>
+                <ul>
+                    <li>تا 120 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">300,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="300000"
+                        user="تا 120 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 130 کاربره</h5>
+                <ul>
+                    <li>تا 130 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">215,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="215000"
+                        user="تا 130 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 130 کاربره</h5>
+                <ul>
+                    <li>تا 130 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">320,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="320000"
+                        user="تا 130 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 140 کاربره</h5>
+                <ul>
+                    <li>تا 140 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">225,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="225000"
+                        user="تا 140 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 140 کاربره</h5>
+                <ul>
+                    <li>تا 140 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">345,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="345000"
+                        user="تا 140 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 150 کاربره</h5>
+                <ul>
+                    <li>تا 150 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">245,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="245000"
+                        user="تا 150 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 150 کاربره</h5>
+                <ul>
+                    <li>تا 150 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">365,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="365000"
+                        user="تا 150 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+
+        </content>
+        <!--end service three-->
+        <!--service four-->
+        <content class="grid" id="ser-four" dir="rtl">
+
+            <article class="mat cases column clipped ">
+                <h5>سرویس 160 کاربره</h5>
+                <ul>
+                    <li>تا 160 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">175,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="175000"
+                        user="تا 160 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 160 کاربره</h5>
+                <ul>
+                    <li>تا 160 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">380,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="380000"
+                        user="تا 160 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 170 کاربره</h5>
+                <ul>
+                    <li>تا 170 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">205,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="205000"
+                        user="تا 170 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 170 کاربره</h5>
+                <ul>
+                    <li>تا 170 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">400,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="400000"
+                        user="تا 170 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 180 کاربره</h5>
+                <ul>
+                    <li>تا 180 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">235,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="235000"
+                        user="تا 180 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 180 کاربره</h5>
+                <ul>
+                    <li>تا 180 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">430,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="430000"
+                        user="تا 180 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 190 کاربره</h5>
+                <ul>
+                    <li>تا 190 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">265,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="265000"
+                        user="تا 190 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 190 کاربره</h5>
+                <ul>
+                    <li>تا 190 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">450,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="450000"
+                        user="تا 190 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 200 کاربره</h5>
+                <ul>
+                    <li>تا 200 کاربر همزمان</li>
+                    <li> 2 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">290,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="290000"
+                        user="تا 200 کاربر همزمان"
+                        time="2 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+            <article class="mat cases column clipped ">
+                <h5>سرویس 200 کاربره</h5>
+                <ul>
+                    <li>تا 200 کاربر همزمان</li>
+                    <li> 10 ساعت در ماه</li>
+                    <li>تا 3 ویدیو همزمان</li>
+                </ul>
+
+                <label class="center">470,000 <span>تومان(ماهانه)</span></label>
+                <button onclick="selectPlan(this)"
+                        price="470000"
+                        user="تا 200 کاربر همزمان"
+                        time="10 ساعت در ماه"
+                        video="تا 3 ویدیو همزمان">
+                    انتخاب پلن
+                </button>
+            </article>
+
+        </content>
+        <!--end service four-->
+
+
+    </div>
+
+    <div class="space-double"></div>
+
+
+    <script src="../../Scripts/orders/orders.js"></script>
+    <script src="../../Scripts/orders/navigation.js"></script>
+</body>
+</html>

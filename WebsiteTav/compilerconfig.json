@@ -18,5 +18,9 @@
   {
     "outputFile": "Styles/Admin/Orders.css",
     "inputFile": "Ignore/Sass/Admin/Orders.scss"
+  },
+  {
+    "outputFile": "Ignore/Sass/orderPage.css",
+    "inputFile": "Ignore/Sass/orderPage.scss"
   }
 ]

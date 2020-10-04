@@ -401,6 +401,7 @@
     }
 }
 
+/**/
 .WhoWeAre {
     width: 100vw;
     margin: auto;
@@ -413,165 +414,159 @@
         text-align-last: center;
         direction: rtl;
     }
+}
 
-    .carousel {
-        margin: 3vh auto auto auto;
-        width: 85vw;
+.staff {
+    display: flex;
+    flex-direction: column;
+    background: $Cardbackground;
+    border-radius: 4px;
+    text-align: right;
+    margin: 12px auto;
+    @include shadow-mild();
+
+    br {
+        height: 5px;
+    }
+
+    p {
+        margin: 8px 12px 4px 0;
+    }
+
+    &-image {
+        height: 224px;
+        width: auto;
+        @include shadow-more;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center;
+        object-position: center;
+    }
+
+    &-name {
+        color: $Text;
+        font-weight: 400;
+        float: right;
+    }
+
+    &-description {
+        flex: 3;
+        font-weight: 300;
+        font-size: 1.3vw;
+        padding-left: 8px;
+    }
 
 
-        &-button {
-            position: absolute;
-            width: 11vh;
-            height: 11vh;
-            padding: 3vw 0;
-            align-content: center;
-            background: rgba(185, 185, 185, 0.32);
-            transition: all ease 0.5s;
+    &-links {
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
 
-            img {
-                width: 50%;
-                align-self: center;
+        .icon {
+            margin: 8px auto;
+            fill: red;
+
+            object {
+                width: 1.5vw;
+                fill: red;
             }
         }
 
-        &-content {
-            flex: 1;
-            display: flex;
-            flex-direction: row;
-
-            .trigger-row {
-                display: flex;
-                flex-direction: row;
-                align-content: space-between;
-                align-self: center;
-
-                .staff {
-                    display: flex;
-                    margin: 4vw !important;
-                    flex-direction: column;
-                    background: $Cardbackground;
-                    height: 30vw;
-                    width: 18vw;
-                    @include shadow-more;
-                    border-radius: 4px;
-                    text-align: right;
-                    margin: 2vw !important;
-
-                    br {
-                        height: 5px;
-                    }
-
-                    p {
-                        margin: 8px 12px 4px 0;
-                    }
-
-                    &-image {
-                        flex: 4.8;
-                        border-radius: 0 0 1.2vw 1.2vw;
-                        @include shadow-more;
-                    }
-
-                    &-name {
-                        color: $Text;
-                        font-weight: 400;
-                        float: right;
-                    }
-
-                    &-description {
-                        flex: 3;
-                        font-weight: 300;
-                        font-size: 1.3vw;
-                        padding-left: 8px;
-                    }
-
-
-                    &-links {
-                        display: flex;
-                        flex-direction: row;
-                        align-content: space-between;
-
-                        .icon {
-                            margin: 8px auto;
-                            fill: red;
-
-                            object {
-                                width: 1.5vw;
-                                fill: red;
-                            }
-                        }
-
-                        .icon:hover .img {
-                            fill: $Icon_Dark_Hover;
-                            -moz-filter: drop-shadow( 0px 0px 4px $Icon_Dark_Hover);
-                            -ms-filter: drop-shadow( 0px 0px 4px $Icon_Dark_Hover);
-                            -webkit-filter: drop-shadow( 0px 0px 4px $Icon_Dark_Hover);
-                            filter: drop-shadow( 0px 0px 4px $Icon_Dark_Hover);
-                        }
-                    }
-                }
-            }
+        .icon:hover .img {
+            fill: $Icon_Dark_Hover;
+            -moz-filter: drop-shadow( 0px 0px 4px $Icon_Dark_Hover);
+            -ms-filter: drop-shadow( 0px 0px 4px $Icon_Dark_Hover);
+            -webkit-filter: drop-shadow( 0px 0px 4px $Icon_Dark_Hover);
+            filter: drop-shadow( 0px 0px 4px $Icon_Dark_Hover);
         }
     }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width:825px) {
+    $staff-height: 380px;
+
+    .staff {
+        width: 256px;
+        height: $staff-height;
+
+        &-image {
+            height: $staff-height * 3/5;
+        }
+    }
+}
+
+@media only screen and (max-width: 824px) {
+    $staff-height: 240px;
+
+    .staff {
+        width: 180px !important;
+        height: $staff-height !important;
+
+        &-image {
+            height: $staff-height * 3/5;
+        }
+    }
+}
+
+@media only screen and (max-width: 512px) {
+    $staff-height: 180px;
+
+    .staff {
+        width: 124px !important;
+        height: $staff-height !important;
+
+        &-image {
+            height: $staff-height * 3/5;
+        }
+    }
+}
+
+@media only screen and (max-device-width : 624px) {
     .WhoWeAre {
         background: darken($Background, 2%);
         padding-bottom: 3vw;
 
-        .carousel {
-            margin: 3vh auto auto auto;
-            width: 100vw;
+        .staff {
+            width: 30vw;
+            height: 50vw;
 
-            &-content {
-                flex-direction: column;
+            p {
+                font-size: 26px;
+                margin: 8px 12px 4px 0;
+            }
 
-                .trigger-row {
-                    margin: 0 24vw !important;
+            &-image {
+                flex: 5;
+                @include shadow-more;
+            }
 
-                    .staff {
-                        height: 76vw;
-                        width: 45vw;
+            &-name {
+                color: $Text;
+                font-weight: bold;
+                float: right;
+            }
 
-                        p {
-                            font-size: 4vw;
-                            margin: 8px 12px 4px 0;
-                        }
+            &-description {
+                flex: 3;
+            }
 
-                        &-image {
-                            flex: 5;
-                            border-radius: 0 0 1.2vw 1.2vw;
-                            @include shadow-more;
-                        }
+            &-links {
 
-                        &-name {
-                            color: $Text;
-                            font-weight: bold;
-                            float: right;
-                        }
+                .icon {
+                    margin: 8px auto;
+                    fill: red;
 
-                        &-description {
-                            flex: 3;
-                        }
-
-                        &-links {
-
-                            .icon {
-                                margin: 8px auto;
-                                fill: red;
-
-                                object {
-                                    width: 2vw;
-                                    fill: red;
-                                }
-                            }
-                        }
+                    object {
+                        width: 2vw;
+                        fill: red;
                     }
                 }
             }
         }
     }
 }
+
+/**/
 
 .projects {
 
@@ -1039,4 +1034,11 @@
             margin: 6vw auto !important;
         }
     }
+}
+
+.offers {
+    h6 {
+        text-align: center;
+    }
+
 }
