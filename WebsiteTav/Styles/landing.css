@@ -102,8 +102,7 @@ p {
   color: #606060; }
 
 body {
-  background: #F0F0F2;
-  min-height: 100vh !important; }
+  background: #F0F0F2; }
 
 .center {
   text-align: center;
@@ -1404,6 +1403,3 @@ nav:hover {
     width: 50vw;
     height: 65vw;
     margin: 6vw auto !important; } }
-
-.offers h6 {
-  text-align: center; }

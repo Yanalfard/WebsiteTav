@@ -43,7 +43,6 @@ p {
 
 body {
     background: $Background;
-    min-height:100vh!important;
 }
 
 @mixin center() {
@@ -135,7 +134,7 @@ img {
     }
 }
 
-.space-mobile {و
+.space-mobile {
     visibility: collapse;
 
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

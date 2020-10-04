@@ -90,12 +90,6 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Ignore\Idol.html" />
-    <Content Include="Ignore\Sass\orderPage.css">
-      <DependentUpon>orderPage.scss</DependentUpon>
-    </Content>
-    <Content Include="Ignore\Sass\orderPage.min.css">
-      <DependentUpon>orderPage.css</DependentUpon>
-    </Content>
     <Content Include="JsDecoder\BjaxLib.js" />
     <Content Include="JsDecoder\CoopJore.js" />
     <Content Include="JsDecoder\HelpJore.js" />
@@ -183,7 +177,6 @@
     </None>
     <Content Include="Ignore\Sass\Offer.scss" />
     <Content Include="Ignore\Sass\Admin\Orders.scss" />
-    <Content Include="Ignore\Sass\orderPage.scss" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Resources\Font\iranian_sans-webfont.woff" />
     <Content Include="Resources\Font\iranian_sans-webfont.woff2" />
@@ -263,10 +256,6 @@
     <Content Include="Scripts\Jquery\umd\popper.min.js" />
     <Content Include="Scripts\Landing.js" />
     <Content Include="Scripts\Offer.js" />
-    <Content Include="Scripts\orders\finish.js" />
-    <Content Include="Scripts\orders\navigation.js" />
-    <Content Include="Scripts\orders\orders.js" />
-    <Content Include="Scripts\orders\period.js" />
     <Content Include="Scripts\Owl\owl.carousel.min.js" />
     <Content Include="Scripts\Parking.js" />
     <Content Include="Scripts\uikit-icons.min.js" />
@@ -298,9 +287,6 @@
     <Content Include="View\offers\ASP2.html" />
     <Content Include="View\offers\ASP1.html" />
     <Content Include="View\offers\word-press-two.html" />
-    <Content Include="View\order\finish.html" />
-    <Content Include="View\order\order.html" />
-    <Content Include="View\order\period.html" />
     <Content Include="View\Products\DigiDarman.html" />
     <Content Include="View\Products\Parking.html" />
     <Content Include="View\offers\word-press-one.html" />
