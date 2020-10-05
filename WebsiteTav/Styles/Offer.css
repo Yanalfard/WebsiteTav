@@ -64,7 +64,7 @@
 
 .space-nav-bottom {
   width: 100vw;
-  height: 64px; }
+  height: 80px; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .space-nav {
@@ -140,6 +140,123 @@
 
 .MainContent {
   height: 100%; }
+
+#bigP, .bigP-container {
+  font-size: 16px !important;
+  text-align: justify;
+  -ms-text-justify: kashida;
+  text-justify: kashida;
+  overflow-y: hidden; }
+  #bigP > *, .bigP-container > * {
+    font-size: 16px; }
+  #bigP *, .bigP-container * {
+    overflow-y: hidden !important; }
+
+.cards {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  overflow: visible !important; }
+  .cards .mat {
+    margin: auto !important;
+    width: 280px;
+    overflow: hidden; }
+    .cards .mat img {
+      flex: 1;
+      object-fit: contain;
+      max-height: 180px; }
+    .cards .mat content {
+      flex: 1;
+      overflow: hidden; }
+      .cards .mat content * {
+        overflow: hidden; }
+      .cards .mat content li label {
+        font-size: small; }
+      .cards .mat content h6 {
+        font-size: medium; }
+      .cards .mat content a {
+        font-size: small; }
+      .cards .mat content a:visited {
+        color: #34C9B5; }
+      .cards .mat content .price {
+        color: #65d74f;
+        font-size: 20px; }
+      .cards .mat content .toman {
+        font-size: 12px;
+        color: #65d74f; }
+
+@media only screen and (max-device-width: 480px) {
+  .cards {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    overflow: visible !important; }
+    .cards .mat {
+      margin: auto !important;
+      width: 280px;
+      height: 360px;
+      overflow: hidden; }
+      .cards .mat img {
+        flex: 1;
+        object-fit: contain; }
+      .cards .mat content {
+        flex: 1;
+        overflow: hidden; }
+        .cards .mat content * {
+          overflow: hidden; }
+        .cards .mat content li label {
+          font-size: small; }
+        .cards .mat content h6 {
+          font-size: medium;
+          width: 280px !important;
+          text-align: center !important; }
+        .cards .mat content a {
+          font-size: small; }
+        .cards .mat content a:visited {
+          color: #34C9B5; }
+        .cards .mat content .price {
+          color: #65d74f;
+          font-size: 20px; }
+        .cards .mat content .toman {
+          font-size: 8px;
+          color: #65d74f; } }
+
+@media only screen and (max-width: 825px) {
+  .cards {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    overflow: visible !important; }
+    .cards .mat {
+      margin: auto !important;
+      width: 180px;
+      height: 250px;
+      overflow: hidden; }
+      .cards .mat img {
+        flex: 1;
+        object-fit: contain; }
+      .cards .mat content {
+        flex: 1;
+        overflow: hidden; }
+        .cards .mat content * {
+          overflow: hidden; }
+        .cards .mat content li label {
+          font-size: small; }
+        .cards .mat content h6 {
+          font-size: medium; }
+        .cards .mat content a {
+          font-size: small; }
+        .cards .mat content a:visited {
+          color: #34C9B5; }
+        .cards .mat content .price {
+          color: #65d74f;
+          font-size: 20px; }
+        .cards .mat content .toman {
+          font-size: 8px;
+          color: #65d74f; } }
 
 .WP1 {
   display: flex;

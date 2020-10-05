@@ -5,7 +5,8 @@
     padding: 0;
     float: none;
     overflow-x: hidden;
-    font-family: 'Segoe UI';
+    font-family: IRANYekan;
+    line-height: 1.6;
     text-decoration: none;
     font-size: 2vw;
 }
@@ -40,10 +41,14 @@ p {
 }
 
 
+h1, h2, h3, h4, h5, h6, label, p, header {
+    overflow-y: hidden !important;
+    
+}
 
 body {
     background: $Background;
-    min-height:100vh!important;
+    min-height: 100vh !important;
 }
 
 @mixin center() {
@@ -128,10 +133,10 @@ img {
 }
 
 .uk-notification-message {
-    div{
-        font-size:20px!important;
-        text-align:right;
-        direction:rtl;
+    div {
+        font-size: 20px !important;
+        text-align: right;
+        direction: rtl;
     }
 }
 

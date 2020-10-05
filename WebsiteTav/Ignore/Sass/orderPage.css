@@ -51,7 +51,8 @@
   padding: 0;
   float: none;
   overflow-x: hidden;
-  font-family: 'Segoe UI';
+  font-family: IRANYekan;
+  line-height: 1.6;
   text-decoration: none;
   font-size: 2vw; }
 
@@ -76,6 +77,9 @@ p {
   overflow-x: hidden;
   overflow-y: hidden;
   color: #606060; }
+
+h1, h2, h3, h4, h5, h6, label, p, header {
+  overflow-y: hidden !important; }
 
 body {
   background: #F0F0F2;
@@ -302,7 +306,7 @@ footer {
 
 .space-nav-bottom {
   width: 100vw;
-  height: 64px; }
+  height: 80px; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .space-nav {
