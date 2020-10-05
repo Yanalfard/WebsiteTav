@@ -1,6 +1,6 @@
 ﻿@import '_colors.scss';
 @import '_global.scss';
-@import '_controls.scss';
+
 @import '_layout.scss';
 
 //---------------------------------------
@@ -359,7 +359,7 @@ ul {
         }
 
         tr:nth-child(even) {
-            background-color: #cfcbcb;
+            background-color: #f2f2f2;
         }
     }
 

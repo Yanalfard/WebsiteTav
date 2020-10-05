@@ -64,6 +64,7 @@ nav {
     z-index: 100;
     position: fixed;
     width: 100vw;
+    height: 64px;
     padding: .6vw;
     overflow-y: hidden;
     background: transparent;
@@ -83,7 +84,7 @@ nav {
         align-content: center;
 
         img {
-            height: 2vw;
+            height: 35px;
             width: auto;
             margin: 0;
         }
@@ -102,11 +103,11 @@ nav {
 
         a {
             align-self: center;
-            padding: .4vw 1.0vw;
+            padding: 8px 12px;
             vertical-align: central;
-            font-size: 1.2vw;
+            font-size: 15px;
             float: right;
-            margin-right: 1vw;
+            margin-right: 8px;
             color: $Text;
             overflow-y: hidden;
             @include border-radius(100px,100px,100px,100px);
@@ -135,34 +136,6 @@ nav:hover {
     @include trans(.2s);
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    nav {
-        padding: 1vw;
-        background: transparentize($NavBackground,.32);
-        @include shadow-mega();
-
-        .logo {
-            flex: .5;
-            padding: .5vw;
-        }
-
-        section.row {
-            flex: 3;
-            margin-right: 4vw;
-            flex-direction: row-reverse !important;
-
-            a {
-                padding: 0.2vw 2vw .8vw 2vw;
-                font-size: 2.2vw;
-
-                img {
-                    height: 2.0vw;
-                }
-            }
-        }
-    }
-}
-
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     nav {
         padding: 1vw;
@@ -182,7 +155,6 @@ nav:hover {
 
             a {
                 padding: 0.6vw 3vw 2.5vw 3vw;
-                font-size: 4vw;
 
                 img {
                     vertical-align: central;
@@ -230,6 +202,22 @@ nav:hover {
         font-size: 4vw;
         padding: 16px 28px;
     }
+}
+
+.btn {
+    background: #66BB6A;
+    padding: 8px;
+    font-size: large;
+    border: 0;
+    width: 160px;
+    color: white;
+    opacity: 1;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.7;
 }
 
 

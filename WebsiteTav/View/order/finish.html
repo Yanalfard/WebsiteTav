@@ -6,7 +6,7 @@
 
     <link rel="icon" href=" /Resources/Svg/favIcon.svg" />
     <link href="../../Ignore/Sass/orderPage.min.css" rel="stylesheet" />
-
+    <link href="../../Styles/Controls.min.css" rel="stylesheet" />
     <link href=" /Styles/Owl/owl.carousel.min.css" rel="stylesheet" />
     <link href=" /Styles/Owl/owl.theme.default.min.css" rel="stylesheet" />
     <!--Uikit-->
@@ -43,25 +43,25 @@
     <!-- #region Nav -->
 
     <nav class="row">
-        <a href="Landing.html" class="logo">
+        <a href="/View/Landing.html" class="logo">
             <img class="fillheight center" src="/Resources/Svg/ArvinTavLogo.svg" />
         </a>
         <section class="row">
-            <a href="../Landing.html" class="row">
+            <a href="/View/Landing.html" class="row">
                 خانه
                 <img src="/Resources/Svg/Icons/Home.svg" class="center" />
             </a>
-
+            <a href="/View/About.html">درباره ما</a>
+            <a href="/View/DigitalMarketing.html">دیجیتال مارکتینگ</a>
+            <a href="/View/order/order.html">آموزش آنلاین</a>
         </section>
     </nav>
+
+    <!-- #endregion -->
     <div class="space"></div>
     <div class="space-desktop"></div>
     <div class="space-mobile"></div>
     <!-- #endregion -->
-    <!--<label id="rangeCount" class="hover ">
-        20
-    </label>-->
-
 
     <div class="order-container column clipped ">
         <h3 class="center">سفارش سرویس</h3>
@@ -87,7 +87,6 @@
         <div class="space"></div>
         <label class="tableLabel uk-margin-auto-right" dir="rtl">مشخصات سفارش</label>
         <table class="mat" dir="rtl">
-
             <tr>
                 <td>تعداد کاربر همزمان</td>
                 <td class="usercount"></td>
@@ -95,7 +94,6 @@
             <tr>
                 <td>تعداد ساعت در ماه</td>
                 <td class="timeINmonth"></td>
-
             </tr>
             <tr>
                 <td>تعداد ویدیو همزمان</td>
@@ -109,15 +107,12 @@
                 <td>ظرفیت سرویس</td>
                 <td class="capacity"></td>
             </tr>
-
         </table>
 
         <div class="space-half"></div>
 
         <label class="tableLabel uk-margin-auto-right" dir="rtl">هزینه ها</label>
         <table class="mat" dir="rtl">
-
-
             <tr>
                 <th>عنوان</th>
                 <th>قیمت پایه</th>
@@ -129,40 +124,51 @@
                 <td class="priceInfinish"></td>
                 <td class="periodInfinish"></td>
                 <td class="totalpriceInfinish"></td>
-
             </tr>
-
-
         </table>
         <div class="space-half"></div>
         <table class="mat" dir="rtl">
             <tr>
                 <td>جمع کل</td>
                 <td class="totalpriceInfinish"></td>
-
-
             </tr>
             <tr>
                 <td>مالیات</td>
                 <td>قیمت</td>
-
-
             </tr>
             <tr>
                 <td>قابل پرداخت</td>
                 <td>قیمت</td>
-
             </tr>
-
         </table>
         <div class="space"></div>
-        <button class="confirm uk-margin-auto-left " onclick="window.location = 'finish.html'" dir="rtl">سفارش</button>
+        <button class="btn confirm uk-margin-auto-left" uk-toggle="target: #modal-order">سفارش</button>
     </div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
 
+    <!--modal-->
+    <!-- This is the modal -->
+    <div id="modal-order" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body column clipped center">
+            <a class="uk-modal-close uk-close"></a>
+            <div class="text">
+                <label class="text-label">نام و نام خانوادگی</label>
+                <input id="txtName" type="text" class="text-entry" placeholder="نام و نام خانوادگی شما" />
+            </div>
+            <div class="text">
+                <label class="text-label uk-margin-top">شماره تلفن</label>
+                <input id="txtTel" type="tel" class="text-entry" placeholder="0914." />
+            </div>
+            <div class="space"></div>
+
+            <button class="btn" onclick="finishUp()">سفارش</button>
+        </div>
+    </div>
+
+
+    <div class="space"></div>
+    <div class="space"></div>
+    <script src="../../JsDecoder/BjaxLib.js"></script>
+    <script src="../../JsDecoder/StartJore.js"></script>
     <script src="../../Scripts/orders/navigation.js"></script>
     <script src="../../Scripts/orders/finish.js"></script>
 </body>

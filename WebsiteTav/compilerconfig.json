@@ -22,5 +22,13 @@
   {
     "outputFile": "Ignore/Sass/orderPage.css",
     "inputFile": "Ignore/Sass/orderPage.scss"
+  },
+  {
+    "outputFile": "Styles/Table.css",
+    "inputFile": "Ignore/Sass/Table.scss"
+  },
+  {
+    "outputFile": "Styles/Controls.css",
+    "inputFile": "Ignore/Sass/Controls.scss"
   }
 ]

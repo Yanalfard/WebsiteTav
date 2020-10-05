@@ -90,12 +90,8 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Ignore\Idol.html" />
-    <Content Include="Ignore\Sass\orderPage.css">
-      <DependentUpon>orderPage.scss</DependentUpon>
-    </Content>
-    <Content Include="Ignore\Sass\orderPage.min.css">
-      <DependentUpon>orderPage.css</DependentUpon>
-    </Content>
+    <Content Include="Ignore\Sass\orderPage.css" />
+    <Content Include="Ignore\Sass\orderPage.min.css" />
     <Content Include="JsDecoder\BjaxLib.js" />
     <Content Include="JsDecoder\CoopJore.js" />
     <Content Include="JsDecoder\HelpJore.js" />
@@ -121,11 +117,14 @@
     <Content Include="Resources\Svg\Avatar_Female.svg" />
     <Content Include="Resources\Svg\Avatar_Male.svg" />
     <Content Include="Resources\Svg\BackgroundProjects.svg" />
+    <Content Include="Resources\Svg\Bisket.svg" />
     <Content Include="Resources\Svg\CellPhone.svg" />
     <Content Include="Resources\Svg\DigiDarman.svg" />
     <Content Include="Resources\Svg\favIcon.svg" />
     <Content Include="Resources\Svg\Icon.svg" />
     <Content Include="Resources\Svg\Icons\Chat.svg" />
+    <Content Include="Resources\Svg\Icons\Check.svg" />
+    <Content Include="Resources\Svg\Icons\Cross.svg" />
     <Content Include="Resources\Svg\Icons\Download.svg" />
     <Content Include="Resources\Svg\Icons\HamburgerMenu.svg" />
     <Content Include="Resources\Svg\Icons\Headset.svg" />
@@ -153,7 +152,9 @@
     <Content Include="Resources\Svg\Underline_4.svg" />
     <Content Include="Resources\Svg\Underline_5.svg" />
     <Content Include="Resources\Svg\Underline_D.svg" />
+    <Content Include="Resources\Svg\Waterfall\Cloud.svg" />
     <Content Include="Resources\Svg\Waterfall\Design.svg" />
+    <Content Include="Resources\Svg\Waterfall\Learning.svg" />
     <Content Include="Resources\Svg\Waterfall\Mobile.svg" />
     <Content Include="Resources\Svg\Waterfall\Monitor.svg" />
     <Content Include="Resources\Svg\Waterfall\Network.svg" />
@@ -180,13 +181,20 @@
     <Content Include="Scripts\Jquery\esm\popper.js" />
     <Content Include="Scripts\Jquery\esm\popper.min.js" />
     <Content Include="Ignore\Web.config" />
-    <Content Include="Ignore\Sass\_layout.scss" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="Ignore\Sass\Offer.scss" />
+    <Content Include="Ignore\Sass\about.scss" />
     <Content Include="Ignore\Sass\Admin\Orders.scss" />
+    <Content Include="Ignore\Sass\landing.scss" />
+    <Content Include="Ignore\Sass\Offer.scss" />
     <Content Include="Ignore\Sass\orderPage.scss" />
+    <Content Include="Ignore\Sass\product.scss" />
+    <Content Include="Ignore\Sass\Table.scss" />
+    <Content Include="Ignore\Sass\_colors.scss" />
+    <Content Include="Ignore\Sass\_global.scss" />
+    <Content Include="Ignore\Sass\_layout.scss" />
+    <Content Include="Ignore\Sass\Controls.scss" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="Resources\Font\iranian_sans-webfont.woff" />
     <Content Include="Resources\Font\iranian_sans-webfont.woff2" />
@@ -280,6 +288,10 @@
     <Content Include="Styles\Admin\Orders.min.css">
       <DependentUpon>Orders.css</DependentUpon>
     </Content>
+    <Content Include="Styles\Controls.css" />
+    <Content Include="Styles\Controls.min.css">
+      <DependentUpon>Controls.css</DependentUpon>
+    </Content>
     <Content Include="Styles\landing.css" />
     <Content Include="Styles\landing.min.css" />
     <Content Include="Styles\Offer.css" />
@@ -290,11 +302,16 @@
     <Content Include="Styles\Owl\owl.theme.default.min.css" />
     <Content Include="Styles\product.css" />
     <Content Include="Styles\product.min.css" />
+    <Content Include="Styles\Table.css" />
+    <Content Include="Styles\Table.min.css">
+      <DependentUpon>Table.css</DependentUpon>
+    </Content>
     <Content Include="Styles\uikit.min.css" />
     <Content Include="View\About.html" />
     <Content Include="View\Admin\TblStart.html" />
     <Content Include="View\Admin\TblCoop.html" />
     <Content Include="View\Admin\TblHelp.html" />
+    <Content Include="View\DigitalMarketing.html" />
     <Content Include="View\Dynamic\Project.html" />
     <Content Include="View\Landing.html" />
     <Content Include="View\offers\ASP3.html" />
@@ -349,12 +366,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="compilerconfig.json" />
-    <Content Include="Ignore\Sass\about.scss" />
-    <Content Include="Ignore\Sass\landing.scss" />
-    <Content Include="Ignore\Sass\product.scss" />
-    <Content Include="Ignore\Sass\_colors.scss" />
-    <Content Include="Ignore\Sass\_controls.scss" />
-    <Content Include="Ignore\Sass\_global.scss" />
     <None Include="packages.config" />
     <Content Include="Scripts\Jquery\esm\popper-utils.js.map" />
     <Content Include="Scripts\Jquery\esm\popper-utils.min.js.map" />

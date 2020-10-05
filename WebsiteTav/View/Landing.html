@@ -8,7 +8,7 @@
     <link rel="icon" href="/Resources/Svg/favIcon.svg" />
     <link href="/Styles/Owl/owl.carousel.min.css" rel="stylesheet" />
     <link href="/Styles/Owl/owl.theme.default.min.css" rel="stylesheet" />
-
+    <link href="../Styles/Controls.min.css" rel="stylesheet" />
     <link href="/Resources/Font/stylesheet.css" rel="stylesheet" />
 
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
@@ -23,8 +23,6 @@
 
     <script src="/Scripts/General.js"></script>
     <script src="/Scripts/Landing.js"></script>
-
-
 
     <!-- #region Out -->
     <!--BEGIN RAYCHAT CODE-->
@@ -49,15 +47,17 @@
     <!-- #region Nav -->
 
     <nav class="row">
-        <a href="Landing.html" class="logo">
+        <a href="/View/Landing.html" class="logo">
             <img class="fillheight center" src="/Resources/Svg/ArvinTavLogo.svg" />
         </a>
         <section class="row">
-            <a href="Landing.html" class="row">
+            <a href="/View/Landing.html" class="row">
                 خانه
                 <img src="/Resources/Svg/Icons/Home.svg" class="center" />
             </a>
-            <a href="About.html">درباره ما</a>
+            <a href="/View/About.html">درباره ما</a>
+            <a href="/View/DigitalMarketing.html">دیجیتال مارکتینگ</a>
+            <a href="/View/order/order.html">آموزش آنلاین</a>
         </section>
     </nav>
 
@@ -188,9 +188,10 @@
                 <p>
                     خدمات طراحی و توسعه وب سایت های کاربردی و عملیاتی و طراحی پورتال، برنامه نویسی و توسعه انواع نرم افزارهای کاربردی تحت وب، با توجه به نیازها، نوع فعالیت و متناسب با بودجه در نظر گرفته شده توسط مشتری صورت می پذیرد.
                     در بعضی از موارد يک وب سايت زيبا به تنهايي کارساز نيست و برای موفقيت در تجارت بايد بتوانيد ارتباط قوي تری با بازديدکنندگان خود داشته باشيد و یا اینکه عملیاتی را نیاز دارید که میتواند به ارائه هرچه بهتر خدمات شما کمک کند.
-
                 </p>
-                <button></button>
+                <a href="#tariff" class="btn margin-auto-left">
+                    مشاهده تعرفه ها
+                </a>
             </content>
             <div class="space"></div>
             <img src="../Resources/Svg/Waterfall/Website.svg" />
@@ -205,7 +206,6 @@
                     در بعضی از موارد يک وب سايت یا یک نرم افزار تحت ویندوز به تنهايي کارساز نيستند و برای موفقيت در تجارت و ارتباط قوی تر و ساده تر با مشتریان و بازدید کنندگان باید ابزاری بروزتر و در دسترس تر داشته باشيد تا مشتری بتواند بصورت کاملا آسان با نصب یک اپلیکیشن به خدمات شما دسترسی داشته باشد پیشنهاد ما برای شما داشتن یک اپلیکیشن کاملا قدرتمند میباشد.
 
                 </p>
-                <button></button>
             </content>
             <div class="space"></div>
             <img src="../Resources/Svg/Waterfall/Mobile.svg" />
@@ -214,12 +214,10 @@
         <!-- #region Item -->
         <li class="waterfall-item">
             <content>
-                <h3>طراحی و برنامه نویسی نرم افزارهای تحت ویندوز </h3>
+                <h3>طراحی و برنامه نویسی نرم افزارهای تحت دسکتاپ </h3>
                 <p>
-                    خدمات برنامه نویسی و توسعه نرم افزارهای تحت ویندوز کاربردی و عملیاتی ، با توجه به نیازها، نوع فعالیت و متناسب با بودجه در نظر گرفته شده توسط مشتری صورت می پذیر.
-                    ما مي توانيم نرم افزارهای اختصاصی تحت ویندوز با قابلیت اتصال مستقیم و یکسان سازی شده با وب سایت اصلی شما، مخصوص فعالیت های مجموعه و مطابق با نیاز های شما بصورت اختصاصی برنامه نویسی کرده و ارائه دهيم تا بتوانيد به سادگی تمامی این داده ها و اطلاعات را کاملا بصورت پویا مديريت کنيد.
+                    خدمات برنامه نویسی و توسعه نرم افزارهای تحت دستکاپ با توجه به نیازها، نوع فعالیت و متناسب با نوع کسب و کار شما قابل برنامه ریزی و تحلیل و اجرا می باشد . در واقع  نرم افزارهای اختصاصی تحت دسکتاپ  با قابلیت اتصال مستقیم به پلتفرم های مختلف ،  و مطابق با نیاز های شما بصورت اختصاصی برنامه نویسی شده  و ارائه میشود  تا بتوانيد به سادگی تمامی این داده ها و اطلاعات را کاملا بصورت پویا مديريت کنيد.
                 </p>
-                <button></button>
             </content>
             <div class="space"></div>
             <img src="../Resources/Svg/Waterfall/Monitor.svg" />
@@ -230,30 +228,57 @@
             <content>
                 <h3>راه اندازی شبکه</h3>
                 <p>
-                    تیم راه اندازی شبکه شرکت ایده پرداز آروین تاو می‌تواند با مدیریت کامل بر روی خدمات نصب و راه‌اندازی شبکه‌های درون سازمانی، شرایطی را ایجاد کند تا شما با خیالی راحت بر روی فعالیت‌های مرتبط با کسب و کار خود تمرکز داشته باشید. تیم ما با فعالیت مؤثر، دقیق و سریع خود در تمام مراحل، به شما کمک خواهد کرد تا در اسرع وقت سرویس‌ها و یا تجهیزات فن‌آوری مورد نیاز خود را ارزان‌تر و ایمن‌تر از همیشه نصب و راه‌اندازی کرده و از آن بهره‌مند گردید.
+                    تیم  شبکه شرکت ایده پرداز آروین تاو با تجربه چندین ساله در این حوزه  و  با مدیریت کامل بر روی خدمات نصب و راه‌اندازی شبکه‌های درون سازمانی، شرایطی را ایجاد می کند تا شما با خیالی راحت بر روی فعالیت‌های مرتبط با کسب و کار خود تمرکز داشته باشید. تیم ما با فعالیت مؤثر، دقیق و سریع خود در تمام مراحل، به شما کمک خواهد کرد تا در اسرع وقت سرویس‌ها و یا تجهیزات فن‌آوری مورد نیاز خود را ارزان‌تر و ایمن‌تر از همیشه نصب و راه‌اندازی کرده و از آن بهره‌مند گردید.
                 </p>
-                <button></button>
             </content>
             <div class="space"></div>
             <img src="../Resources/Svg/Waterfall/Network.svg" />
         </li>
         <!-- #endregion -->
         <!-- #region Item -->
-        <li class="waterfall-item collapsed">
+        <li class="waterfall-item">
             <content>
-                <h3>شبکه های اجتماعی</h3>
+                <h3>دیجیتال مارکتینگ</h3>
                 <p>
-                    لورم ایپسوم
-                    متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها
-                    و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                    مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و
-                    اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-
+                    بازاریابی دیجیتال یا Digital Marketing به متدی از بازاریابی می گوییند که از ابزارهای داخل اینترنت برای جذب و جلب توجه مشتریان بهره می گیرد. اولین لازمه اجرای یک کمپین با کیفیت بازاریابی دیجیتال داشتن یک وب سایت با محتوای ارزشمند و اختصاصی است که کسب و کار شما را به درستی توصیف کند و علاوه بر آن طبق استانداردهای موتور جست و جو نوشته شود.
+                    بازاریابی دیجیتال (Digital Marketing) دارای شاخه های متعددی است که سعی شده پکیج های متنوعی برای ارائه این خدمات ارائه شود.
+                    Digital Marketing یک رویکرد جدید است که برای شروع شما نیاز به طراحی سایت ، سئو ، راه اندازی شبکه های اجتماعی و ... دارید.
                 </p>
-                <button></button>
+                <a href="DigitalMarketing.html" class="btn margin-auto-left">
+                    مشاهده تعرفه ها
+                </a>
             </content>
             <div class="space"></div>
             <img src="../Resources/Svg/Waterfall/SocialMedia.svg" />
+        </li>
+        <!-- #endregion -->
+        <!-- #region Item -->
+        <li class="waterfall-item">
+            <content>
+                <h3>آموزش آنلاین</h3>
+                <p>
+                    از جمله رویکردهای آموزشی نوین در دنیا، که به ویژه در شرایط کنونی از کارایی بالایی برای سازمان‌ها برخوردار است، استفاده از سیستم‌های ارائه‌دهنده خدمات وب کنفرانس و برگزاری جلسات آموزش از راه دور می‌باشد. بهره‌گیری از این سیستم‌ها این امکان را فراهم می‌آورد که سازمان‌ها بتوانند فعالیت‌های آموزشی و جلسات خود را بدون دغدغه به اجرا درآورند. به طور خاص آموزش آنلاین این امکان را فراهم می‌آورد که دیگر بدون محدودیت زمان و درگیری‌های مرتبط با محل و هماهنگی‌های مربوطه دوره، کلاس، وبینار و جلسه آنلاین خود را برگزار نمایید.
+                    راهکار آموزش آنلاین به شما کمک می‌کند تا به راحتی کلاس‌ها و آموزش‌های خود را بر بستر آنلاین و بدون محدودیت مکان و زمان و هزینه‌های مربوطه برگزار نمایید.
+                </p>
+                <a href="order/order.html" class="btn margin-auto-left">
+                    محاسبه سرویس
+                </a>
+            </content>
+            <div class="space"></div>
+            <img src="../Resources/Svg/Waterfall/Learning.svg" />
+        </li>
+        <!-- #endregion -->
+        <!-- #region Item -->
+        <li class="waterfall-item">
+            <content>
+                <h3>مجازی سازی و پردازش ابری</h3>
+                <p>
+                    Virtualization یا مجازی‌سازی تکنولوژی است که بوسیله آن می توان اجرای همزمان چندین  سیستم عامل بر روی یک سرور را داشته باشیم به نحوی که باعث بهره وری در هزینه های سخت افزار و نرم افزار و همچنین استفاده بهینه از تمامی منابع سیستمی شود .
+                    با افتخار اعلام مینماییم امکان ارایه خدمات تخصصی مجازی سازی و دسترس پذیری بالا بصورت سازمانی را دارا میباشیم .
+                </p>
+            </content>
+            <div class="space"></div>
+            <img src="../Resources/Svg/Waterfall/Cloud.svg" />
         </li>
         <!-- #endregion -->
         <!-- #region Item -->
@@ -268,7 +293,6 @@
                     اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
 
                 </p>
-                <button></button>
             </content>
             <div class="space"></div>
             <img src="../Resources/Svg/Waterfall/Design.svg" />
@@ -351,12 +375,10 @@
         <img src="../Resources/Svg/Underline_5.svg" />
     </div>
 
-    <div class="space"></div>
-    <div class="space"></div>
+    <div class="space-half"></div>
 
     <div class="cards clipped margin-auto-left margin-auto-right">
-        <article class=" mat column ">
-
+        <article class="mat column tarefe">
             <img src="../Resources/Png/WordPress.png" />
             <content class="offers padding">
                 <h6>WordPress 1</h6>
@@ -388,8 +410,7 @@
                 </div>
             </content>
         </article>
-        <article class="mat column">
-
+        <article class="mat column tarefe">
             <img src="../Resources/Png/WordPress.png" />
             <content class="offers padding">
                 <h6>WordPress 2</h6>
@@ -420,7 +441,7 @@
                 </div>
             </content>
         </article>
-        <article class="mat column">
+        <article class="mat column tarefe">
             <img src="../Resources/Png/Asp.png" />
 
             <content class="offers padding">
@@ -452,7 +473,7 @@
                 </div>
             </content>
         </article>
-        <article class="mat column">
+        <article class="mat column tarefe">
 
             <img src="../Resources/Png/Asp.png" />
             <content class="offers padding">
@@ -484,7 +505,7 @@
                 </div>
             </content>
         </article>
-        <article class="mat column">
+        <article class="mat column tarefe">
             <img src="../Resources/Png/Asp.png" />
             <content class="offers padding">
                 <h6>ASP.net 3</h6>
@@ -515,7 +536,6 @@
                 </div>
             </content>
         </article>
-
     </div>
 
     <!-- #endnewregion -->
@@ -601,10 +621,10 @@
             </p>
         </div>
         <!-- #endregion -->
-        <!-- #region Lemi -->
+        <!-- #region Bagheri -->
         <div class="staff">
-            <img src="../Resources/Svg/Avatar_Male.svg" alt="" class="staff-image" />
-            <p class="staff-name">صدرا محمدی</p>
+            <img src="../Resources/Svg/Avatar_Female.svg" alt="" class="staff-image" />
+            <p class="staff-name">نازیلا باقری</p>
             <p class="staff-description">
                 کارشناس نرم افزار
                 <br />
@@ -612,10 +632,10 @@
             </p>
         </div>
         <!-- #endregion -->
-        <!-- #region Bagheri -->
+        <!-- #region Lemi -->
         <div class="staff">
-            <img src="../Resources/Svg/Avatar_Female.svg" alt="" class="staff-image" />
-            <p class="staff-name">نازیلا باقری</p>
+            <img src="../Resources/Svg/Avatar_Male.svg" alt="" class="staff-image" />
+            <p class="staff-name">صدرا محمدی</p>
             <p class="staff-description">
                 کارشناس نرم افزار
                 <br />
@@ -1017,13 +1037,13 @@
 
             });
         sr.reveal(
-            '.cards',
+            '.tarefe',
             {
                 duration: duration,
-                origin: 'bottom',
-                viewFactor: .8
+                origin: 'bottom'
 
             });
+
     </script>
 
 </body>
