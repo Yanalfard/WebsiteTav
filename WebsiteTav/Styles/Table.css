@@ -336,22 +336,23 @@ table {
     border-top: 1px solid #ccc; }
   table thead th {
     padding: 16px;
-    font-size: 20px;
+    font-size: 16px;
     background: #4a4a4a;
     color: #fff; }
   table tbody td {
     padding: 12px;
-    font-size: 18px;
+    font-size: 16px;
     border-right: 1px solid #ccc; }
   table tbody img {
     width: 100%;
-    height: 24px;
+    height: 16px;
     -o-object-fit: contain;
     object-fit: contain;
     -o-object-position: center;
     object-position: center; }
   table tfoot td {
     padding: 16px;
+    font-size: 20px;
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
     color: #ff0000; }
