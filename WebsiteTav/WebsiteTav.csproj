@@ -321,6 +321,7 @@
     <Content Include="View\order\finish.html" />
     <Content Include="View\order\order.html" />
     <Content Include="View\order\period.html" />
+    <Content Include="View\order\SchoolOrder.html" />
     <Content Include="View\Products\DigiDarman.html" />
     <Content Include="View\Products\Parking.html" />
     <Content Include="View\offers\word-press-one.html" />

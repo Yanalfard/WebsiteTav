@@ -322,6 +322,20 @@ img {
 .padding {
   padding: 16px !important; }
 
+.school {
+  padding: 5px;
+  font-size: medium;
+  border: 0;
+  width: 80px;
+  color: #57AE46;
+  opacity: 1;
+  transition: 0.3s;
+  margin: auto;
+  border-radius: 20px; }
+
+button:hover {
+  opacity: 0.7; }
+
 .order-container {
   overflow-x: visible !important; }
   .order-container * {
@@ -377,12 +391,12 @@ p {
   padding: 10px; }
 
 ul {
-  font-size: 14px;
+  font-size: 16px;
   list-style-type: circle !important;
   list-style-position: inside;
   padding: 30px; }
   ul li {
-    font-size: 14px;
+    font-size: 16px;
     padding-right: 10px; }
 
 @media only screen and (max-device-width: 600px) {
