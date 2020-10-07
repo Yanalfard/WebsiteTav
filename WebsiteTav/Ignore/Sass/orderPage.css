@@ -51,7 +51,7 @@
   padding: 0;
   float: none;
   overflow-x: hidden;
-  font-family: IRANYekan;
+  font-family: IRANYekan, 'Segoe UI';
   line-height: 1.6;
   text-decoration: none;
   font-size: 2vw; }
@@ -192,64 +192,6 @@ img {
     width: 50vw;
     overflow: no-display;
     margin: 8px auto 0 auto !important; } }
-
-footer {
-  display: flex;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -ms-align-content: space-between;
-  -webkit-align-content: space-between;
-  align-content: space-between;
-  border-top: solid #bebebe 1px;
-  background: #E5E5E5;
-  width: 100vw;
-  height: 40vw; }
-  footer .map {
-    width: 50vw;
-    height: 40vw; }
-  footer .column {
-    margin: 4vw;
-    float: right; }
-    footer .column .contact {
-      align-self: flex-start;
-      margin: 1vw auto; }
-      footer .column .contact p {
-        text-align: center !important;
-        align-self: center;
-        vertical-align: central;
-        text-align: center;
-        font-size: 1.5vw; }
-      footer .column .contact img {
-        margin: auto;
-        width: 3vw;
-        height: 3vw; }
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  footer {
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -ms-align-content: space-between;
-    -webkit-align-content: space-between;
-    align-content: space-between;
-    height: auto; }
-    footer .map {
-      width: 100vw;
-      height: 30vh; }
-    footer .column {
-      margin: 4vw;
-      float: none; }
-      footer .column .contact {
-        align-self: flex-start;
-        margin: 2vh auto; }
-        footer .column .contact p {
-          font-size: 4vw; }
-        footer .column .contact img {
-          margin-bottom: 2vh;
-          width: 9vw;
-          height: 9vw; } }
 
 .copyright {
   display: block;
@@ -436,7 +378,6 @@ p {
 
 ul {
   font-size: 14px;
-  background: #b8d49b;
   list-style-type: circle !important;
   list-style-position: inside;
   padding: 30px; }

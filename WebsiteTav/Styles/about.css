@@ -51,7 +51,7 @@
   padding: 0;
   float: none;
   overflow-x: hidden;
-  font-family: IRANYekan;
+  font-family: IRANYekan, 'Segoe UI';
   line-height: 1.6;
   text-decoration: none;
   font-size: 2vw; }
@@ -193,64 +193,6 @@ img {
     overflow: no-display;
     margin: 8px auto 0 auto !important; } }
 
-footer {
-  display: flex;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -ms-align-content: space-between;
-  -webkit-align-content: space-between;
-  align-content: space-between;
-  border-top: solid #bebebe 1px;
-  background: #E5E5E5;
-  width: 100vw;
-  height: 40vw; }
-  footer .map {
-    width: 50vw;
-    height: 40vw; }
-  footer .column {
-    margin: 4vw;
-    float: right; }
-    footer .column .contact {
-      align-self: flex-start;
-      margin: 1vw auto; }
-      footer .column .contact p {
-        text-align: center !important;
-        align-self: center;
-        vertical-align: central;
-        text-align: center;
-        font-size: 1.5vw; }
-      footer .column .contact img {
-        margin: auto;
-        width: 3vw;
-        height: 3vw; }
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  footer {
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -ms-align-content: space-between;
-    -webkit-align-content: space-between;
-    align-content: space-between;
-    height: auto; }
-    footer .map {
-      width: 100vw;
-      height: 30vh; }
-    footer .column {
-      margin: 4vw;
-      float: none; }
-      footer .column .contact {
-        align-self: flex-start;
-        margin: 2vh auto; }
-        footer .column .contact p {
-          font-size: 4vw; }
-        footer .column .contact img {
-          margin-bottom: 2vh;
-          width: 9vw;
-          height: 9vw; } }
-
 .copyright {
   display: block;
   text-align: center;
@@ -384,34 +326,49 @@ footer {
   width: 85%;
   margin-top: 4px;
   font-size: 1.5vw;
-  text-align: justify;
+  text-align: justify !important;
+  -ms-text-justify: kashida !important;
+  text-justify: kashida !important;
   text-align-last: center; }
 
 .media {
   margin: auto;
   width: 16vw;
-  align-content: space-between; }
+  align-content: space-between;
+  overflow: hidden !important; }
   .media-icon {
-    width: 75%; }
+    width: 50%; }
 
 .map {
-  width: 100vw;
+  width: 80vw;
+  margin: auto !important;
   background: rgba(223, 223, 223, 0.85);
-  height: 38vw; }
+  height: 28vw; }
 
-.contact {
-  margin: 2vw; }
-  .contact-icon {
-    width: 4vw;
-    height: 4vw; }
+.contacts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-gap: 3vw;
+  width: 90vw; }
+  .contacts .dummy {
+    background: #1cef31;
+    width: 100%; }
+  .contacts .contact {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 2vw; }
+    .contacts .contact-icon {
+      width: 4vw;
+      height: 4vw; }
 
 .email {
   margin: auto !important;
   width: 20vw;
   height: 30vw;
-  padding: 2vw !important; }
+  padding: 2.0vw !important; }
   .email text {
-    margin: 0.8vw !important; }
+    margin: .8vw !important; }
 
 #text {
   height: 12vw; }

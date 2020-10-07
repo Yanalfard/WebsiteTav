@@ -1,5 +1,6 @@
 ﻿@import '_colors.scss';
 @import '_global.scss';
+@import '_layout.scss';
 
 /*#region SideNav */
 
@@ -134,6 +135,15 @@ nav:hover {
     background: transparentize($NavBackground,.32);
     @include shadow-medium();
     @include trans(.2s);
+}
+
+@media only screen and (max-width : 768px) {
+    nav {
+        a {
+            padding: 4px;
+            font-size: 10px !important;
+        }
+    }
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -344,4 +354,69 @@ nav:hover {
 
 .errorProvider {
     font-size: 1vw;
+}
+
+footer {
+    @include row();
+    background-color: $Footer-background;
+    border-top: 1px solid #a7a7a7 !important;
+    padding: 0 24px;
+
+    .column {
+        flex: 1;
+        padding: 24px 0;
+    }
+
+    .map {
+        height: 100%;
+    }
+
+    .contact {
+        @include row();
+        margin-bottom: 12px;
+
+        * {
+            overflow-y: hidden !important;
+        }
+
+        img {
+            height: 32px;
+            width: 32px;
+            margin-left: auto;
+        }
+
+        span {
+            font-size: 16px;
+            margin-left: auto !important;
+            margin-right: 0;
+            text-align: right;
+            padding-right: 12px;
+            width: 100%;
+        }
+    }
+
+    ul {
+        list-style: none !important;
+
+        li {
+            list-style: none !important;
+
+            a {
+                font-size: 16px;
+                list-style: none !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-device-width : 480px) {
+    footer {
+        flex-direction: column;
+    }
 }

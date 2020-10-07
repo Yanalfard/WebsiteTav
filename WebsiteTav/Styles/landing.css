@@ -429,6 +429,7 @@
     direction: rtl; }
 
 .staff {
+  height: 380px;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -442,6 +443,8 @@
     height: 5px; }
   .staff p {
     margin: 8px 12px 4px 0; }
+  .staff small {
+    font-size: 1.1vw; }
   .staff-image {
     height: 224px;
     width: auto;
@@ -454,8 +457,9 @@
     object-position: center; }
   .staff-name {
     color: #606060;
-    font-weight: 400;
-    float: right; }
+    font-weight: 300;
+    float: right;
+    margin: 0 8px 0 0 !important; }
   .staff-description {
     flex: 3;
     font-weight: 300;
@@ -478,12 +482,14 @@
       -webkit-filter: drop-shadow(0px 0px 4px #53C41C);
       filter: drop-shadow(0px 0px 4px #53C41C); }
 
-@media only screen and (min-width: 825px) {
+@media only screen and (max-width: 825px) {
   .staff {
     width: 256px;
     height: 380px; }
     .staff-image {
-      height: 228px; } }
+      height: 228px; }
+  small {
+    font-size: 1vw !important; } }
 
 @media only screen and (max-width: 824px) {
   .staff {

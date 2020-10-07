@@ -152,6 +152,15 @@
   #bigP *, .bigP-container * {
     overflow-y: hidden !important; }
 
+#modal-more {
+  text-align: justify;
+  -ms-text-justify: kashida;
+  text-justify: kashida; }
+  #modal-more * {
+    overflow: hidden; }
+  #modal-more > div {
+    width: 80vw; }
+
 .cards {
   display: grid;
   grid-template-rows: auto;

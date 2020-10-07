@@ -418,8 +418,9 @@
     }
 }
 
-
 .staff {
+    $staff-height: 380px;
+    height: $staff-height;
     display: flex;
     flex-direction: column;
     background: $Cardbackground;
@@ -436,6 +437,10 @@
         margin: 8px 12px 4px 0;
     }
 
+    small {
+        font-size: 1.1vw ;
+    }
+
     &-image {
         height: 224px;
         width: auto;
@@ -448,8 +453,9 @@
 
     &-name {
         color: $Text;
-        font-weight: 400;
+        font-weight: 300;
         float: right;
+        margin: 0 8px 0 0 !important;
     }
 
     &-description {
@@ -458,7 +464,6 @@
         font-size: 1.3vw;
         padding-left: 8px;
     }
-
 
     &-links {
         display: flex;
@@ -485,7 +490,7 @@
     }
 }
 
-@media only screen and (min-width:825px) {
+@media only screen and (max-width:825px) {
     $staff-height: 380px;
 
     .staff {
@@ -495,6 +500,10 @@
         &-image {
             height: $staff-height * 3/5;
         }
+    }
+
+    small {
+        font-size: 1vw !important;
     }
 }
 

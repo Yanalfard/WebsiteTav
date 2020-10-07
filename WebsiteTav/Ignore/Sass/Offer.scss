@@ -21,6 +21,20 @@
     }
 }
 
+#modal-more {
+
+    * {
+        overflow: hidden;
+    }
+
+    > div {
+        width: 80vw;
+    }
+
+    text-align: justify;
+    -ms-text-justify: kashida;
+    text-justify: kashida;
+}
 
 .cards {
     $cardWidth: 280px;
@@ -110,7 +124,7 @@
 
                 h6 {
                     font-size: medium;
-                    width: $cardWidth!important;
+                    width: $cardWidth !important;
                     text-align: center !important;
                 }
 
