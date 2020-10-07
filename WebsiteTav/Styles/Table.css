@@ -345,7 +345,7 @@ table {
     border-right: 1px solid #ccc; }
   table tbody img {
     width: 100%;
-    height: 16px;
+    height: 24px;
     -o-object-fit: contain;
     object-fit: contain;
     -o-object-position: center;
