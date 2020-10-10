@@ -68,7 +68,7 @@ nav {
     height: 64px;
     padding: .6vw;
     overflow-y: hidden;
-    background: transparent;
+    backdrop-filter: blur(8px);
     @include trans(.4s);
 
     > * {
@@ -133,7 +133,6 @@ nav {
 
 nav:hover {
     background: transparentize($NavBackground,.32);
-    @include shadow-medium();
     @include trans(.2s);
 }
 
