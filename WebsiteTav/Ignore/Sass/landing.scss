@@ -278,6 +278,25 @@
             a {
                 margin-top: 16px;
             }
+
+            details {
+                white-space: normal !important;
+                outline: none !important;
+                border: none;
+                font-size: 14px !important;
+                margin-right: auto;
+                padding-right: 20px;
+                overflow: hidden !important;
+                cursor: pointer;
+
+                summary {
+                    white-space: normal !important;
+                    outline: none !important;
+                    border: none;
+                    font-size: 14px;
+                    overflow: hidden !important;
+                }
+            }
         }
     }
 }
@@ -385,6 +404,49 @@
             }
         }
     }
+
+    .waterfall {
+        margin: auto auto 1vh auto;
+        width: 84vw;
+        padding: 12px;
+
+        .btn {
+            font-size: 24px !important;
+            width: auto !important;
+            white-space: nowrap;
+            padding: 16px;
+        }
+
+        li {
+            @include row();
+            margin-top: 5vw;
+
+            content {
+
+                h3 {
+                    font-size: 32px;
+                    margin-bottom: .8vw;
+                    margin-left: auto;
+                    white-space: pre-line;
+                    text-align: right;
+                }
+
+                p, span {
+                    font-size: 24px;
+                    text-justify: inter-word;
+                    text-align: justify;
+                }
+
+                details {
+                    margin-top: 8px;
+
+                    summary {
+                        font-size: 20px !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .workflow {
@@ -438,7 +500,7 @@
     }
 
     small {
-        font-size: 1.1vw ;
+        font-size: 1.1vw;
     }
 
     &-image {
@@ -687,14 +749,13 @@
 
 @media only screen and (min-device-width : 0px) and (max-device-width : 568px) {
 
-
     .group {
 
         @include column();
 
         .query {
             min-height: 12vh;
-            width: 70vw;
+            width: 42vw;
             margin-bottom: 2vh;
             height: auto;
 
@@ -704,7 +765,7 @@
             }
 
             &-text {
-                font-size: 5vw;
+                font-size: 3vw;
                 align-self: center;
                 text-align: right;
                 flex: 6;

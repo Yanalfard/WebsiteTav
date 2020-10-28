@@ -461,13 +461,16 @@ nav:hover {
     -webkit-box-shadow: rgba(72, 72, 72, 0.78) 0 0px 1.2vw;
     box-shadow: rgba(72, 72, 72, 0.78) 0 0px 1.2vw; }
     nav .logo {
-      flex: 0.5; }
+      flex: 0.4; }
     nav section.row {
       flex: 3;
       margin-right: 4vw;
       flex-direction: row-reverse !important; }
       nav section.row a {
-        padding: 0.6vw 3vw 2.5vw 3vw; }
+        white-space: nowrap;
+        padding: 0;
+        margin: auto !important;
+        font-size: 24px; }
         nav section.row a img {
           vertical-align: central;
           height: 3.6vw; }

@@ -154,7 +154,7 @@ nav:hover {
         @include shadow-mega();
 
         .logo {
-            flex: 0.5;
+            flex: 0.4;
         }
 
         section.row {
@@ -163,7 +163,10 @@ nav:hover {
             flex-direction: row-reverse !important;
 
             a {
-                padding: 0.6vw 3vw 2.5vw 3vw;
+                white-space: nowrap;
+                padding: 0;
+                margin: auto !important;
+                font-size: 24px;
 
                 img {
                     vertical-align: central;

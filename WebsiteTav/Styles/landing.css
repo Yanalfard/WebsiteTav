@@ -339,6 +339,21 @@
         text-align: justify; }
       .waterfall li content a {
         margin-top: 16px; }
+      .waterfall li content details {
+        white-space: normal !important;
+        outline: none !important;
+        border: none;
+        font-size: 14px !important;
+        margin-right: auto;
+        padding-right: 20px;
+        overflow: hidden !important;
+        cursor: pointer; }
+        .waterfall li content details summary {
+          white-space: normal !important;
+          outline: none !important;
+          border: none;
+          font-size: 14px;
+          overflow: hidden !important; }
 
 .owl-carousel {
   overflow-x: hidden;
@@ -406,7 +421,39 @@
   .project .mat {
     width: 70vw; }
     .project .mat .row .submit {
-      font-size: 5vw !important; } }
+      font-size: 5vw !important; }
+  .waterfall {
+    margin: auto auto 1vh auto;
+    width: 84vw;
+    padding: 12px; }
+    .waterfall .btn {
+      font-size: 24px !important;
+      width: auto !important;
+      white-space: nowrap;
+      padding: 16px; }
+    .waterfall li {
+      display: flex;
+      -ms-flex-direction: row;
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      -ms-align-content: center;
+      -webkit-align-content: center;
+      align-content: center;
+      margin-top: 5vw; }
+      .waterfall li content h3 {
+        font-size: 32px;
+        margin-bottom: .8vw;
+        margin-left: auto;
+        white-space: pre-line;
+        text-align: right; }
+      .waterfall li content p, .waterfall li content span {
+        font-size: 24px;
+        text-justify: inter-word;
+        text-align: justify; }
+      .waterfall li content details {
+        margin-top: 8px; }
+        .waterfall li content details summary {
+          font-size: 20px !important; } }
 
 .workflow img {
   height: 75vh; }
@@ -621,14 +668,14 @@
     align-content: center; }
     .group .query {
       min-height: 12vh;
-      width: 70vw;
+      width: 42vw;
       margin-bottom: 2vh;
       height: auto; }
       .group .query-image {
         flex: 1.2;
         margin-left: 3vw; }
       .group .query-text {
-        font-size: 5vw;
+        font-size: 3vw;
         align-self: center;
         text-align: right;
         flex: 6; } }
